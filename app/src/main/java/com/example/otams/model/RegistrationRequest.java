@@ -2,6 +2,7 @@ package com.example.otams.model;
 
 import androidx.annotation.Nullable;
 
+import com.google.firebase.firestore.Exclude;
 import com.google.firebase.firestore.PropertyName;
 
 import java.util.ArrayList;
@@ -93,6 +94,7 @@ public class RegistrationRequest {
         return role;
     }
 
+    @Exclude
     public void setRole(UserRole role) {
         this.role = role == null ? null : role.getFirestoreValue();
     }
@@ -112,6 +114,7 @@ public class RegistrationRequest {
         return status;
     }
 
+    @Exclude
     public void setStatus(RequestStatus status) {
         this.status = status == null ? null : status.getFirestoreValue();
     }
