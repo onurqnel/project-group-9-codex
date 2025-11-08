@@ -103,6 +103,20 @@
             app:layout_constraintTop_toBottomOf="@id/approvalSwitch" />
 
 
+        <TextView
+            android:id="@+id/availabilityErrorText"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:fontFamily="@font/poppins_regular"
+            android:textColor="@color/design_default_color_error"
+            android:textSize="14sp"
+            android:visibility="gone"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/addSlotButton" />
+
+
         <View
             android:id="@+id/divider"
             android:layout_width="0dp"
@@ -111,7 +125,7 @@
             android:background="?android:attr/listDivider"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/addSlotButton" />
+            app:layout_constraintTop_toBottomOf="@id/availabilityErrorText" />
 
         <!-- List of existing slots -->
         <androidx.recyclerview.widget.RecyclerView
