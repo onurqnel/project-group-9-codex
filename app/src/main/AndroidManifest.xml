@@ -16,49 +16,48 @@
         android:theme="@style/Theme.Otams">
 
         <activity
-            android:name=".TutorHome"
+            android:name=".ui.home.TutorHome"
             android:exported="false" />
         <activity
-            android:name=".StudentHome"
+            android:name=".ui.home.StudentHome"
             android:exported="false" />
         <activity
-            android:name=".Main"
+            android:name=".ui.LauncherActivity"
             android:exported="false" />
         <activity
-            android:name=".LandingPage"
+            android:name=".ui.auth.LandingPage"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
         <activity
-            android:name=".LoginPage"
+            android:name=".ui.auth.LoginPage"
             android:exported="true" />
         <activity
-            android:name=".RegisterPage"
+            android:name=".ui.auth.RegisterPage"
             android:exported="true" />
         <activity
-            android:name=".AdministratorPage"
+            android:name=".ui.admin.AdministratorPage"
             android:exported="true" />
         <activity
-            android:name=".TutorRegistrationPage"
+            android:name=".ui.registration.TutorRegistrationPage"
             android:exported="true" />
         <activity
-            android:name=".StudentRegistrationPage"
+            android:name=".ui.registration.StudentRegistrationPage"
             android:exported="true" />
         <activity
-            android:name=".PendingPage"
+            android:name=".ui.registration.PendingPage"
             android:exported="true" />
         <activity
-            android:name=".RejectedPage"
+            android:name=".ui.registration.RejectedPage"
             android:exported="true" />
         <activity
-            android:name=".ApprovedPage"
+            android:name=".ui.registration.ApprovedPage"
             android:exported="true" />
         <activity
-            android:name=".RejectedRequestsPage"
+            android:name=".ui.admin.RejectedRequestsPage"
             android:exported="true" />
     </application>
 

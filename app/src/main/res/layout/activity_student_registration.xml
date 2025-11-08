@@ -6,7 +6,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:padding="16dp"
-    tools:context=".StudentRegistrationPage"> <!-- Assuming a context class -->
+    tools:context=".ui.registration.StudentRegistrationPage"> <!-- Assuming a context class -->
 
     <!-- I've wrapped the form fields in a ScrollView, which is best practice
          for forms that might not fit on smaller screens or in landscape mode. -->
