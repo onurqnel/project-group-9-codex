@@ -38,7 +38,7 @@
                     }
                 },
                 {
-                    "source": "/home/onur/uottawa/fall/seg2105/project-group-9/app/src/main/res/values-night/themes.xml",
+                    "source": "/home/onur/git/project-group-9-codex/app/src/main/res/values-night/themes.xml",
                     "from": {
                         "startLines": "2",
                         "startColumns": "4",

@@ -1193,6 +1193,9 @@
     <color name="secondary_text_disabled_material_light">#24000000</color>
     <color name="slate_gray">#5B5B66</color>
     <color name="soft_gold">#D9B98C</color>
+    <color name="status_approved">#4CAF50</color>
+    <color name="status_pending">#FF9800</color>
+    <color name="status_rejected">#F44336</color>
     <color name="surface">#FFFFFF</color>
     <color name="switch_thumb_disabled_material_dark">#ff616161</color>
     <color name="switch_thumb_disabled_material_light">#ffbdbdbd</color>
@@ -2460,11 +2463,30 @@
     <string name="abc_shareactionprovider_share_with">Share with</string>
     <string name="abc_shareactionprovider_share_with_application">Share with <ns2:g example="Mail" id="application_name">%s</ns2:g></string>
     <string name="abc_toolbar_collapse_description">Collapse</string>
+    <string name="admin_logged_out">Administrator logged out.</string>
+    <string name="admin_registration_requests_button">Registration Requests</string>
+    <string name="admin_rejected_requests_button">Rejected Requests</string>
+    <string name="admin_welcome">Welcome, Administrator!</string>
     <string name="android.credentials.TYPE_PASSWORD_CREDENTIAL">Password</string>
     <string name="androidx.credentials.TYPE_PUBLIC_KEY_CREDENTIAL">Passkey</string>
     <string name="androidx_startup" translatable="false">androidx.startup</string>
     <string name="app_name">otams</string>
     <string name="appbar_scrolling_view_behavior" translatable="false">com.google.android.material.appbar.AppBarLayout$ScrollingViewBehavior</string>
+    <string name="availability_auto_approval">Auto-approve enabled</string>
+    <string name="availability_end_after_start">End time must be after the start time.</string>
+    <string name="availability_increment_error">Start and end times must be in 30-minute increments.</string>
+    <string name="availability_load_error">Unable to load availability.</string>
+    <string name="availability_manual_approval">Manual approval required</string>
+    <string name="availability_no_tutor">No tutor logged in.</string>
+    <string name="availability_overlap_error">This slot overlaps with an existing availability.</string>
+    <string name="availability_past_error">Availability must be in the future.</string>
+    <string name="availability_slot_created">Availability slot added.</string>
+    <string name="availability_slot_deleted">Availability slot removed.</string>
+    <string name="availability_slot_error">Unable to update availability slot.</string>
+    <string name="availability_status_expired">Expired</string>
+    <string name="availability_status_open">Open</string>
+    <string name="availability_time_error">Select a valid start and end time.</string>
+    <string name="availability_time_range">%1$s – %2$s</string>
     <string name="bottom_sheet_behavior" translatable="false">com.google.android.material.bottomsheet.BottomSheetBehavior</string>
     <string description="A description of an accessibility action to collapse the bottom sheet [CHAR LIMIT=NONE]" name="bottomsheet_action_collapse">Collapse the bottom sheet</string>
     <string description="A description of an accessibility action to expand the bottom sheet [CHAR LIMIT=NONE]" name="bottomsheet_action_expand">Expand the bottom sheet</string>
@@ -2503,10 +2525,14 @@
     <string name="common_signin_button_text_long">Sign in with Google</string>
     <string name="copy_toast_msg">Link copied to clipboard</string>
     <string name="email">Email</string>
+    <string name="empty_pending_requests">No pending requests</string>
+    <string name="empty_rejected_requests">No rejected requests</string>
     <string description="Screen reader announcement for when a checkbox is on error. [CHAR LIMIT=NONE]" name="error_a11y_label">
     Error: invalid
   </string>
     <string name="error_icon_content_description">Error</string>
+    <string name="error_loading_requests">Error loading requests: %1$s</string>
+    <string name="error_request_action">Failed to update request: %1$s</string>
     <string name="exposed_dropdown_menu_content_description">Show dropdown menu</string>
     <string name="fab_transformation_scrim_behavior" translatable="false">com.google.android.material.transformation.FabTransformationScrimBehavior</string>
     <string name="fab_transformation_sheet_behavior" translatable="false">com.google.android.material.transformation.FabTransformationSheetBehavior</string>
@@ -2519,13 +2545,21 @@
     <string name="google_app_id" translatable="false">1:674158438139:android:1316d6a70bbac8b4d2f25e</string>
     <string name="google_crash_reporting_api_key" translatable="false">AIzaSyAbHEJhRnMt9ZyYgsrNkdOFrJ8-6rW5lR8</string>
     <string name="google_storage_bucket" translatable="false">otams-682d0.firebasestorage.app</string>
-    <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="hide_bottom_view_on_scroll_behavior" translatable="false">com.google.android.material.behavior.HideBottomViewOnScrollBehavior</string>
     <string description="Content description for an icon that appears in the title area of a dialog" name="icon_content_description">Dialog Icon</string>
     <string name="item_view_role_description">Tab</string>
     <string name="login">Login</string>
+    <string name="login_admin_success">Logged in as Administrator</string>
+    <string name="login_enter_credentials">Enter email and password</string>
+    <string name="login_failed">Authentication failed: %1$s</string>
+    <string name="login_no_request_found">Profile setup is not complete. Please finish your registration.</string>
+    <string name="login_request_parse_error">Unable to read your registration details.</string>
+    <string name="login_status_error">Error checking account status: %1$s</string>
+    <string name="login_success">Login Successful. Welcome!</string>
     <string name="logo_of_the_app">Logo_of_the_app</string>
     <string name="logout">Logout</string>
+    <string name="logout_student_success">Logged out successfully.</string>
+    <string name="logout_tutor_success">Logged out successfully.</string>
     <string name="m3_exceed_max_badge_text_suffix" translatable="false"><ns2:g example="Some te" id="part of a long text">%1$s</ns2:g><ns2:g example="…" id="suffix">%2$s</ns2:g></string>
     <string description="Content description for a loading indicator [CHAR LIMIT=NONE]" name="m3_loading_indicator_content_description">
     Loading
@@ -2654,15 +2688,60 @@
     <string name="path_password_strike_through" translatable="false">M3.27,4.27 L19.74,20.74</string>
     <string name="project_id" translatable="false">otams-682d0</string>
     <string name="register">Register</string>
+    <string name="registration_account_created">Account created. Complete profile.</string>
+    <string name="registration_failed">Registration failed: %1$s</string>
+    <string name="registration_fill_all_fields">Fill in all fields.</string>
+    <string name="registration_user_null">Account created, but user data is null.</string>
+    <string name="rejected_request_row">%1$s (%2$s)</string>
+    <string name="rejected_requests_title">Previously Rejected User Registrations</string>
+    <string name="request_approved">Request approved successfully</string>
+    <string name="request_courses_format">Courses: %1$s</string>
+    <string name="request_degree_format">Degree: %1$s</string>
+    <string name="request_full_name_format">%1$s %2$s</string>
+    <string name="request_program_format">Program: %1$s</string>
+    <string name="request_rejected">Request rejected</string>
+    <string name="request_role_unknown">Unknown</string>
+    <string name="requests_action_error">Failed to update request status</string>
+    <string name="requests_approved">Request approved</string>
+    <string name="requests_no_tutor">No tutor logged in.</string>
+    <string name="requests_pending_title">Pending Requests</string>
+    <string name="requests_rejected">Request rejected</string>
     <string name="search_menu_title">Search</string>
     <string name="searchbar_scrolling_view_behavior" translatable="false">
     com.google.android.material.search.SearchBar$ScrollingViewBehavior
   </string>
     <string description="Content description for the X button to clear text [CHAR_LIMIT=NONE]" name="searchview_clear_text_content_description">Clear text</string>
     <string description="Content description for the navigation button to return to the previous screen [CHAR_LIMIT=NONE]" name="searchview_navigation_content_description">Back</string>
+    <string name="session_action_approve">Approve</string>
+    <string name="session_action_cancel">Cancel session</string>
+    <string name="session_action_reject">Reject</string>
+    <string name="session_time_range">%1$s - %2$s</string>
+    <string name="session_unknown_course">Course not specified</string>
+    <string name="session_unknown_student">Unknown student</string>
+    <string name="sessions_approved_toast">Session approved.</string>
+    <string name="sessions_cancelled_toast">Session cancelled.</string>
+    <string name="sessions_detail_course">Course: %1$s</string>
+    <string name="sessions_detail_email">Email: %1$s</string>
+    <string name="sessions_detail_no_info">No additional student information is available for this session.</string>
+    <string name="sessions_detail_phone">Phone: %1$s</string>
+    <string name="sessions_detail_program">Program: %1$s</string>
+    <string name="sessions_detail_title">Session details</string>
+    <string name="sessions_load_error">Unable to load sessions.</string>
+    <string name="sessions_no_tutor">No tutor logged in.</string>
+    <string name="sessions_past_empty">No past sessions</string>
+    <string name="sessions_rejected_toast">Session rejected.</string>
+    <string name="sessions_upcoming_empty">No upcoming sessions yet</string>
+    <string name="sessions_update_error">Unable to update session.</string>
     <string description="Title of the side sheet&apos;s accessibility pane that is spoken by TalkBack when the side sheet appears on screen. [CHAR_LIMIT=NONE]" name="side_sheet_accessibility_pane_title">Side Sheet</string>
     <string name="side_sheet_behavior" translatable="false">com.google.android.material.sidesheet.SideSheetBehavior</string>
+    <string name="status_approved_message">You can now log in to access your dashboard.</string>
+    <string name="status_approved_title">Your request was approved!</string>
+    <string name="status_back_to_login">Back to login page</string>
     <string name="status_bar_notification_info_overflow">999+</string>
+    <string name="status_pending_message">Your account is awaiting administrator approval.</string>
+    <string name="status_pending_title">Your request is pending!</string>
+    <string name="status_rejected_message">Contact the administrator at 1-800-555-5555 for assistance.</string>
+    <string name="status_rejected_title">Your request was rejected.</string>
     <string name="student">Student</string>
     <string name="tutor">Tutor</string>
     <string name="welcome">Welcome</string>

@@ -1,9 +1,9 @@
 -- Merging decision tree log ---
 manifest
-ADDED from /home/onur/uottawa/fall/seg2105/project-group-9/app/src/main/AndroidManifest.xml:2:1-65:12
-INJECTED from /home/onur/uottawa/fall/seg2105/project-group-9/app/src/main/AndroidManifest.xml:2:1-65:12
-INJECTED from /home/onur/uottawa/fall/seg2105/project-group-9/app/src/main/AndroidManifest.xml:2:1-65:12
-INJECTED from /home/onur/uottawa/fall/seg2105/project-group-9/app/src/main/AndroidManifest.xml:2:1-65:12
+ADDED from /home/onur/git/project-group-9-codex/app/src/main/AndroidManifest.xml:2:1-64:12
+INJECTED from /home/onur/git/project-group-9-codex/app/src/main/AndroidManifest.xml:2:1-64:12
+INJECTED from /home/onur/git/project-group-9-codex/app/src/main/AndroidManifest.xml:2:1-64:12
+INJECTED from /home/onur/git/project-group-9-codex/app/src/main/AndroidManifest.xml:2:1-64:12
 MERGED from [com.firebaseui:firebase-ui-firestore:8.0.2] /home/onur/.gradle/caches/8.13/transforms/fd46a09ada6f63d107e591a544337a2f/transformed/firebase-ui-firestore-8.0.2/AndroidManifest.xml:2:1-11:12
 MERGED from [com.google.firebase:firebase-auth:24.0.1] /home/onur/.gradle/caches/8.13/transforms/9079a572cd9476560315beaea11f4a2a/transformed/firebase-auth-24.0.1/AndroidManifest.xml:17:1-75:12
 MERGED from [com.google.firebase:firebase-firestore:26.0.1] /home/onur/.gradle/caches/8.13/transforms/ecd066f5b0c1bee6ac46fa73ca886ddb/transformed/firebase-firestore-26.0.1/AndroidManifest.xml:2:1-26:12
@@ -85,16 +85,16 @@ MERGED from [io.grpc:grpc-android:1.62.2] /home/onur/.gradle/caches/8.13/transfo
 MERGED from [com.google.firebase:protolite-well-known-types:18.0.1] /home/onur/.gradle/caches/8.13/transforms/cf041838656d332ca46ac38447cb5cda/transformed/protolite-well-known-types-18.0.1/AndroidManifest.xml:2:1-7:12
 MERGED from [com.google.android.play:core-common:2.0.3] /home/onur/.gradle/caches/8.13/transforms/adf81bb9efe2afe7873fb7d603078b18/transformed/core-common-2.0.3/AndroidManifest.xml:2:1-21:12
 	package
-		ADDED from /home/onur/uottawa/fall/seg2105/project-group-9/app/src/main/AndroidManifest.xml:3:5-32
-		INJECTED from /home/onur/uottawa/fall/seg2105/project-group-9/app/src/main/AndroidManifest.xml
+		ADDED from /home/onur/git/project-group-9-codex/app/src/main/AndroidManifest.xml:3:5-32
+		INJECTED from /home/onur/git/project-group-9-codex/app/src/main/AndroidManifest.xml
 	android:versionName
-		INJECTED from /home/onur/uottawa/fall/seg2105/project-group-9/app/src/main/AndroidManifest.xml
+		INJECTED from /home/onur/git/project-group-9-codex/app/src/main/AndroidManifest.xml
 	android:versionCode
-		INJECTED from /home/onur/uottawa/fall/seg2105/project-group-9/app/src/main/AndroidManifest.xml
+		INJECTED from /home/onur/git/project-group-9-codex/app/src/main/AndroidManifest.xml
 	xmlns:android
-		ADDED from /home/onur/uottawa/fall/seg2105/project-group-9/app/src/main/AndroidManifest.xml:2:11-69
+		ADDED from /home/onur/git/project-group-9-codex/app/src/main/AndroidManifest.xml:2:11-69
 uses-permission#android.permission.INTERNET
-ADDED from /home/onur/uottawa/fall/seg2105/project-group-9/app/src/main/AndroidManifest.xml:5:5-67
+ADDED from /home/onur/git/project-group-9-codex/app/src/main/AndroidManifest.xml:5:5-67
 MERGED from [com.firebaseui:firebase-ui-firestore:8.0.2] /home/onur/.gradle/caches/8.13/transforms/fd46a09ada6f63d107e591a544337a2f/transformed/firebase-ui-firestore-8.0.2/AndroidManifest.xml:9:5-67
 MERGED from [com.firebaseui:firebase-ui-firestore:8.0.2] /home/onur/.gradle/caches/8.13/transforms/fd46a09ada6f63d107e591a544337a2f/transformed/firebase-ui-firestore-8.0.2/AndroidManifest.xml:9:5-67
 MERGED from [com.google.firebase:firebase-auth:24.0.1] /home/onur/.gradle/caches/8.13/transforms/9079a572cd9476560315beaea11f4a2a/transformed/firebase-auth-24.0.1/AndroidManifest.xml:25:5-67
@@ -104,9 +104,9 @@ MERGED from [com.google.firebase:firebase-firestore:26.0.1] /home/onur/.gradle/c
 MERGED from [com.google.android.recaptcha:recaptcha:18.6.1] /home/onur/.gradle/caches/8.13/transforms/70295d99d1aea13a80eb3725c15d87ba/transformed/recaptcha-18.6.1/AndroidManifest.xml:7:5-67
 MERGED from [com.google.android.recaptcha:recaptcha:18.6.1] /home/onur/.gradle/caches/8.13/transforms/70295d99d1aea13a80eb3725c15d87ba/transformed/recaptcha-18.6.1/AndroidManifest.xml:7:5-67
 	android:name
-		ADDED from /home/onur/uottawa/fall/seg2105/project-group-9/app/src/main/AndroidManifest.xml:5:22-64
+		ADDED from /home/onur/git/project-group-9-codex/app/src/main/AndroidManifest.xml:5:22-64
 uses-permission#android.permission.ACCESS_NETWORK_STATE
-ADDED from /home/onur/uottawa/fall/seg2105/project-group-9/app/src/main/AndroidManifest.xml:6:5-79
+ADDED from /home/onur/git/project-group-9-codex/app/src/main/AndroidManifest.xml:6:5-79
 MERGED from [com.google.firebase:firebase-auth:24.0.1] /home/onur/.gradle/caches/8.13/transforms/9079a572cd9476560315beaea11f4a2a/transformed/firebase-auth-24.0.1/AndroidManifest.xml:26:5-79
 MERGED from [com.google.firebase:firebase-auth:24.0.1] /home/onur/.gradle/caches/8.13/transforms/9079a572cd9476560315beaea11f4a2a/transformed/firebase-auth-24.0.1/AndroidManifest.xml:26:5-79
 MERGED from [com.google.firebase:firebase-firestore:26.0.1] /home/onur/.gradle/caches/8.13/transforms/ecd066f5b0c1bee6ac46fa73ca886ddb/transformed/firebase-firestore-26.0.1/AndroidManifest.xml:10:5-79
@@ -116,10 +116,10 @@ MERGED from [com.google.android.recaptcha:recaptcha:18.6.1] /home/onur/.gradle/c
 MERGED from [io.grpc:grpc-android:1.62.2] /home/onur/.gradle/caches/8.13/transforms/85ff96a204187f28f43667d72ddacee8/transformed/grpc-android-1.62.2/AndroidManifest.xml:7:5-79
 MERGED from [io.grpc:grpc-android:1.62.2] /home/onur/.gradle/caches/8.13/transforms/85ff96a204187f28f43667d72ddacee8/transformed/grpc-android-1.62.2/AndroidManifest.xml:7:5-79
 	android:name
-		ADDED from /home/onur/uottawa/fall/seg2105/project-group-9/app/src/main/AndroidManifest.xml:6:22-76
+		ADDED from /home/onur/git/project-group-9-codex/app/src/main/AndroidManifest.xml:6:22-76
 application
-ADDED from /home/onur/uottawa/fall/seg2105/project-group-9/app/src/main/AndroidManifest.xml:8:5-63:19
-INJECTED from /home/onur/uottawa/fall/seg2105/project-group-9/app/src/main/AndroidManifest.xml:8:5-63:19
+ADDED from /home/onur/git/project-group-9-codex/app/src/main/AndroidManifest.xml:8:5-62:19
+INJECTED from /home/onur/git/project-group-9-codex/app/src/main/AndroidManifest.xml:8:5-62:19
 MERGED from [com.google.firebase:firebase-auth:24.0.1] /home/onur/.gradle/caches/8.13/transforms/9079a572cd9476560315beaea11f4a2a/transformed/firebase-auth-24.0.1/AndroidManifest.xml:28:5-73:19
 MERGED from [com.google.firebase:firebase-auth:24.0.1] /home/onur/.gradle/caches/8.13/transforms/9079a572cd9476560315beaea11f4a2a/transformed/firebase-auth-24.0.1/AndroidManifest.xml:28:5-73:19
 MERGED from [com.google.firebase:firebase-firestore:26.0.1] /home/onur/.gradle/caches/8.13/transforms/ecd066f5b0c1bee6ac46fa73ca886ddb/transformed/firebase-firestore-26.0.1/AndroidManifest.xml:13:5-24:19
@@ -163,117 +163,117 @@ MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.1] /home/onur/
 MERGED from [com.google.android.play:core-common:2.0.3] /home/onur/.gradle/caches/8.13/transforms/adf81bb9efe2afe7873fb7d603078b18/transformed/core-common-2.0.3/AndroidManifest.xml:11:5-19:19
 MERGED from [com.google.android.play:core-common:2.0.3] /home/onur/.gradle/caches/8.13/transforms/adf81bb9efe2afe7873fb7d603078b18/transformed/core-common-2.0.3/AndroidManifest.xml:11:5-19:19
 	android:extractNativeLibs
-		INJECTED from /home/onur/uottawa/fall/seg2105/project-group-9/app/src/main/AndroidManifest.xml
+		INJECTED from /home/onur/git/project-group-9-codex/app/src/main/AndroidManifest.xml
 	android:appComponentFactory
 		ADDED from [androidx.core:core:1.13.0] /home/onur/.gradle/caches/8.13/transforms/177accc62ec08039aad466654cec7228/transformed/core-1.13.0/AndroidManifest.xml:28:18-86
 	android:supportsRtl
-		ADDED from /home/onur/uottawa/fall/seg2105/project-group-9/app/src/main/AndroidManifest.xml:15:9-35
+		ADDED from /home/onur/git/project-group-9-codex/app/src/main/AndroidManifest.xml:15:9-35
 	android:label
-		ADDED from /home/onur/uottawa/fall/seg2105/project-group-9/app/src/main/AndroidManifest.xml:13:9-41
+		ADDED from /home/onur/git/project-group-9-codex/app/src/main/AndroidManifest.xml:13:9-41
 	android:fullBackupContent
-		ADDED from /home/onur/uottawa/fall/seg2105/project-group-9/app/src/main/AndroidManifest.xml:11:9-54
+		ADDED from /home/onur/git/project-group-9-codex/app/src/main/AndroidManifest.xml:11:9-54
 	android:roundIcon
-		ADDED from /home/onur/uottawa/fall/seg2105/project-group-9/app/src/main/AndroidManifest.xml:14:9-54
+		ADDED from /home/onur/git/project-group-9-codex/app/src/main/AndroidManifest.xml:14:9-54
 	android:icon
-		ADDED from /home/onur/uottawa/fall/seg2105/project-group-9/app/src/main/AndroidManifest.xml:12:9-43
+		ADDED from /home/onur/git/project-group-9-codex/app/src/main/AndroidManifest.xml:12:9-43
 	android:allowBackup
-		ADDED from /home/onur/uottawa/fall/seg2105/project-group-9/app/src/main/AndroidManifest.xml:9:9-35
+		ADDED from /home/onur/git/project-group-9-codex/app/src/main/AndroidManifest.xml:9:9-35
 	android:theme
-		ADDED from /home/onur/uottawa/fall/seg2105/project-group-9/app/src/main/AndroidManifest.xml:16:9-43
+		ADDED from /home/onur/git/project-group-9-codex/app/src/main/AndroidManifest.xml:16:9-43
 	android:dataExtractionRules
-		ADDED from /home/onur/uottawa/fall/seg2105/project-group-9/app/src/main/AndroidManifest.xml:10:9-65
-activity#com.example.otams.TutorHome
-ADDED from /home/onur/uottawa/fall/seg2105/project-group-9/app/src/main/AndroidManifest.xml:18:9-20:40
+		ADDED from /home/onur/git/project-group-9-codex/app/src/main/AndroidManifest.xml:10:9-65
+activity#com.example.otams.ui.home.TutorHome
+ADDED from /home/onur/git/project-group-9-codex/app/src/main/AndroidManifest.xml:18:9-20:40
 	android:exported
-		ADDED from /home/onur/uottawa/fall/seg2105/project-group-9/app/src/main/AndroidManifest.xml:20:13-37
+		ADDED from /home/onur/git/project-group-9-codex/app/src/main/AndroidManifest.xml:20:13-37
 	android:name
-		ADDED from /home/onur/uottawa/fall/seg2105/project-group-9/app/src/main/AndroidManifest.xml:19:13-38
-activity#com.example.otams.StudentHome
-ADDED from /home/onur/uottawa/fall/seg2105/project-group-9/app/src/main/AndroidManifest.xml:21:9-23:40
+		ADDED from /home/onur/git/project-group-9-codex/app/src/main/AndroidManifest.xml:19:13-46
+activity#com.example.otams.ui.home.StudentHome
+ADDED from /home/onur/git/project-group-9-codex/app/src/main/AndroidManifest.xml:21:9-23:40
 	android:exported
-		ADDED from /home/onur/uottawa/fall/seg2105/project-group-9/app/src/main/AndroidManifest.xml:23:13-37
+		ADDED from /home/onur/git/project-group-9-codex/app/src/main/AndroidManifest.xml:23:13-37
 	android:name
-		ADDED from /home/onur/uottawa/fall/seg2105/project-group-9/app/src/main/AndroidManifest.xml:22:13-40
-activity#com.example.otams.Main
-ADDED from /home/onur/uottawa/fall/seg2105/project-group-9/app/src/main/AndroidManifest.xml:24:9-26:40
+		ADDED from /home/onur/git/project-group-9-codex/app/src/main/AndroidManifest.xml:22:13-48
+activity#com.example.otams.ui.LauncherActivity
+ADDED from /home/onur/git/project-group-9-codex/app/src/main/AndroidManifest.xml:24:9-26:40
 	android:exported
-		ADDED from /home/onur/uottawa/fall/seg2105/project-group-9/app/src/main/AndroidManifest.xml:26:13-37
+		ADDED from /home/onur/git/project-group-9-codex/app/src/main/AndroidManifest.xml:26:13-37
 	android:name
-		ADDED from /home/onur/uottawa/fall/seg2105/project-group-9/app/src/main/AndroidManifest.xml:25:13-33
-activity#com.example.otams.LandingPage
-ADDED from /home/onur/uottawa/fall/seg2105/project-group-9/app/src/main/AndroidManifest.xml:27:9-35:20
+		ADDED from /home/onur/git/project-group-9-codex/app/src/main/AndroidManifest.xml:25:13-48
+activity#com.example.otams.ui.auth.LandingPage
+ADDED from /home/onur/git/project-group-9-codex/app/src/main/AndroidManifest.xml:27:9-34:20
 	android:exported
-		ADDED from /home/onur/uottawa/fall/seg2105/project-group-9/app/src/main/AndroidManifest.xml:29:13-36
+		ADDED from /home/onur/git/project-group-9-codex/app/src/main/AndroidManifest.xml:29:13-36
 	android:name
-		ADDED from /home/onur/uottawa/fall/seg2105/project-group-9/app/src/main/AndroidManifest.xml:28:13-40
+		ADDED from /home/onur/git/project-group-9-codex/app/src/main/AndroidManifest.xml:28:13-48
 intent-filter#action:name:android.intent.action.MAIN+category:name:android.intent.category.LAUNCHER
-ADDED from /home/onur/uottawa/fall/seg2105/project-group-9/app/src/main/AndroidManifest.xml:30:13-34:29
+ADDED from /home/onur/git/project-group-9-codex/app/src/main/AndroidManifest.xml:30:13-33:29
 action#android.intent.action.MAIN
-ADDED from /home/onur/uottawa/fall/seg2105/project-group-9/app/src/main/AndroidManifest.xml:31:17-69
+ADDED from /home/onur/git/project-group-9-codex/app/src/main/AndroidManifest.xml:31:17-69
 	android:name
-		ADDED from /home/onur/uottawa/fall/seg2105/project-group-9/app/src/main/AndroidManifest.xml:31:25-66
+		ADDED from /home/onur/git/project-group-9-codex/app/src/main/AndroidManifest.xml:31:25-66
 category#android.intent.category.LAUNCHER
-ADDED from /home/onur/uottawa/fall/seg2105/project-group-9/app/src/main/AndroidManifest.xml:33:17-77
+ADDED from /home/onur/git/project-group-9-codex/app/src/main/AndroidManifest.xml:32:17-77
 	android:name
-		ADDED from /home/onur/uottawa/fall/seg2105/project-group-9/app/src/main/AndroidManifest.xml:33:27-74
-activity#com.example.otams.LoginPage
-ADDED from /home/onur/uottawa/fall/seg2105/project-group-9/app/src/main/AndroidManifest.xml:36:9-38:39
+		ADDED from /home/onur/git/project-group-9-codex/app/src/main/AndroidManifest.xml:32:27-74
+activity#com.example.otams.ui.auth.LoginPage
+ADDED from /home/onur/git/project-group-9-codex/app/src/main/AndroidManifest.xml:35:9-37:39
 	android:exported
-		ADDED from /home/onur/uottawa/fall/seg2105/project-group-9/app/src/main/AndroidManifest.xml:38:13-36
+		ADDED from /home/onur/git/project-group-9-codex/app/src/main/AndroidManifest.xml:37:13-36
 	android:name
-		ADDED from /home/onur/uottawa/fall/seg2105/project-group-9/app/src/main/AndroidManifest.xml:37:13-38
-activity#com.example.otams.RegisterPage
-ADDED from /home/onur/uottawa/fall/seg2105/project-group-9/app/src/main/AndroidManifest.xml:39:9-41:39
+		ADDED from /home/onur/git/project-group-9-codex/app/src/main/AndroidManifest.xml:36:13-46
+activity#com.example.otams.ui.auth.RegisterPage
+ADDED from /home/onur/git/project-group-9-codex/app/src/main/AndroidManifest.xml:38:9-40:39
 	android:exported
-		ADDED from /home/onur/uottawa/fall/seg2105/project-group-9/app/src/main/AndroidManifest.xml:41:13-36
+		ADDED from /home/onur/git/project-group-9-codex/app/src/main/AndroidManifest.xml:40:13-36
 	android:name
-		ADDED from /home/onur/uottawa/fall/seg2105/project-group-9/app/src/main/AndroidManifest.xml:40:13-41
-activity#com.example.otams.AdministratorPage
-ADDED from /home/onur/uottawa/fall/seg2105/project-group-9/app/src/main/AndroidManifest.xml:42:9-44:39
+		ADDED from /home/onur/git/project-group-9-codex/app/src/main/AndroidManifest.xml:39:13-49
+activity#com.example.otams.ui.admin.AdministratorPage
+ADDED from /home/onur/git/project-group-9-codex/app/src/main/AndroidManifest.xml:41:9-43:39
 	android:exported
-		ADDED from /home/onur/uottawa/fall/seg2105/project-group-9/app/src/main/AndroidManifest.xml:44:13-36
+		ADDED from /home/onur/git/project-group-9-codex/app/src/main/AndroidManifest.xml:43:13-36
 	android:name
-		ADDED from /home/onur/uottawa/fall/seg2105/project-group-9/app/src/main/AndroidManifest.xml:43:13-46
-activity#com.example.otams.TutorRegistrationPage
-ADDED from /home/onur/uottawa/fall/seg2105/project-group-9/app/src/main/AndroidManifest.xml:45:9-47:39
+		ADDED from /home/onur/git/project-group-9-codex/app/src/main/AndroidManifest.xml:42:13-55
+activity#com.example.otams.ui.registration.TutorRegistrationPage
+ADDED from /home/onur/git/project-group-9-codex/app/src/main/AndroidManifest.xml:44:9-46:39
 	android:exported
-		ADDED from /home/onur/uottawa/fall/seg2105/project-group-9/app/src/main/AndroidManifest.xml:47:13-36
+		ADDED from /home/onur/git/project-group-9-codex/app/src/main/AndroidManifest.xml:46:13-36
 	android:name
-		ADDED from /home/onur/uottawa/fall/seg2105/project-group-9/app/src/main/AndroidManifest.xml:46:13-50
-activity#com.example.otams.StudentRegistrationPage
-ADDED from /home/onur/uottawa/fall/seg2105/project-group-9/app/src/main/AndroidManifest.xml:48:9-50:39
+		ADDED from /home/onur/git/project-group-9-codex/app/src/main/AndroidManifest.xml:45:13-66
+activity#com.example.otams.ui.registration.StudentRegistrationPage
+ADDED from /home/onur/git/project-group-9-codex/app/src/main/AndroidManifest.xml:47:9-49:39
 	android:exported
-		ADDED from /home/onur/uottawa/fall/seg2105/project-group-9/app/src/main/AndroidManifest.xml:50:13-36
+		ADDED from /home/onur/git/project-group-9-codex/app/src/main/AndroidManifest.xml:49:13-36
 	android:name
-		ADDED from /home/onur/uottawa/fall/seg2105/project-group-9/app/src/main/AndroidManifest.xml:49:13-52
-activity#com.example.otams.PendingPage
-ADDED from /home/onur/uottawa/fall/seg2105/project-group-9/app/src/main/AndroidManifest.xml:51:9-53:39
+		ADDED from /home/onur/git/project-group-9-codex/app/src/main/AndroidManifest.xml:48:13-68
+activity#com.example.otams.ui.registration.PendingPage
+ADDED from /home/onur/git/project-group-9-codex/app/src/main/AndroidManifest.xml:50:9-52:39
 	android:exported
-		ADDED from /home/onur/uottawa/fall/seg2105/project-group-9/app/src/main/AndroidManifest.xml:53:13-36
+		ADDED from /home/onur/git/project-group-9-codex/app/src/main/AndroidManifest.xml:52:13-36
 	android:name
-		ADDED from /home/onur/uottawa/fall/seg2105/project-group-9/app/src/main/AndroidManifest.xml:52:13-40
-activity#com.example.otams.RejectedPage
-ADDED from /home/onur/uottawa/fall/seg2105/project-group-9/app/src/main/AndroidManifest.xml:54:9-56:39
+		ADDED from /home/onur/git/project-group-9-codex/app/src/main/AndroidManifest.xml:51:13-56
+activity#com.example.otams.ui.registration.RejectedPage
+ADDED from /home/onur/git/project-group-9-codex/app/src/main/AndroidManifest.xml:53:9-55:39
 	android:exported
-		ADDED from /home/onur/uottawa/fall/seg2105/project-group-9/app/src/main/AndroidManifest.xml:56:13-36
+		ADDED from /home/onur/git/project-group-9-codex/app/src/main/AndroidManifest.xml:55:13-36
 	android:name
-		ADDED from /home/onur/uottawa/fall/seg2105/project-group-9/app/src/main/AndroidManifest.xml:55:13-41
-activity#com.example.otams.ApprovedPage
-ADDED from /home/onur/uottawa/fall/seg2105/project-group-9/app/src/main/AndroidManifest.xml:57:9-59:39
+		ADDED from /home/onur/git/project-group-9-codex/app/src/main/AndroidManifest.xml:54:13-57
+activity#com.example.otams.ui.registration.ApprovedPage
+ADDED from /home/onur/git/project-group-9-codex/app/src/main/AndroidManifest.xml:56:9-58:39
 	android:exported
-		ADDED from /home/onur/uottawa/fall/seg2105/project-group-9/app/src/main/AndroidManifest.xml:59:13-36
+		ADDED from /home/onur/git/project-group-9-codex/app/src/main/AndroidManifest.xml:58:13-36
 	android:name
-		ADDED from /home/onur/uottawa/fall/seg2105/project-group-9/app/src/main/AndroidManifest.xml:58:13-41
-activity#com.example.otams.RejectedRequestsPage
-ADDED from /home/onur/uottawa/fall/seg2105/project-group-9/app/src/main/AndroidManifest.xml:60:9-62:39
+		ADDED from /home/onur/git/project-group-9-codex/app/src/main/AndroidManifest.xml:57:13-57
+activity#com.example.otams.ui.admin.RejectedRequestsPage
+ADDED from /home/onur/git/project-group-9-codex/app/src/main/AndroidManifest.xml:59:9-61:39
 	android:exported
-		ADDED from /home/onur/uottawa/fall/seg2105/project-group-9/app/src/main/AndroidManifest.xml:62:13-36
+		ADDED from /home/onur/git/project-group-9-codex/app/src/main/AndroidManifest.xml:61:13-36
 	android:name
-		ADDED from /home/onur/uottawa/fall/seg2105/project-group-9/app/src/main/AndroidManifest.xml:61:13-49
+		ADDED from /home/onur/git/project-group-9-codex/app/src/main/AndroidManifest.xml:60:13-58
 uses-sdk
-INJECTED from /home/onur/uottawa/fall/seg2105/project-group-9/app/src/main/AndroidManifest.xml reason: use-sdk injection requested
-INJECTED from /home/onur/uottawa/fall/seg2105/project-group-9/app/src/main/AndroidManifest.xml
-INJECTED from /home/onur/uottawa/fall/seg2105/project-group-9/app/src/main/AndroidManifest.xml
+INJECTED from /home/onur/git/project-group-9-codex/app/src/main/AndroidManifest.xml reason: use-sdk injection requested
+INJECTED from /home/onur/git/project-group-9-codex/app/src/main/AndroidManifest.xml
+INJECTED from /home/onur/git/project-group-9-codex/app/src/main/AndroidManifest.xml
 MERGED from [com.firebaseui:firebase-ui-firestore:8.0.2] /home/onur/.gradle/caches/8.13/transforms/fd46a09ada6f63d107e591a544337a2f/transformed/firebase-ui-firestore-8.0.2/AndroidManifest.xml:5:5-7:41
 MERGED from [com.firebaseui:firebase-ui-firestore:8.0.2] /home/onur/.gradle/caches/8.13/transforms/fd46a09ada6f63d107e591a544337a2f/transformed/firebase-ui-firestore-8.0.2/AndroidManifest.xml:5:5-7:41
 MERGED from [com.google.firebase:firebase-auth:24.0.1] /home/onur/.gradle/caches/8.13/transforms/9079a572cd9476560315beaea11f4a2a/transformed/firebase-auth-24.0.1/AndroidManifest.xml:21:5-23:151
@@ -437,9 +437,9 @@ MERGED from [com.google.android.play:core-common:2.0.3] /home/onur/.gradle/cache
 	tools:overrideLibrary
 		ADDED from [com.google.firebase:firebase-auth:24.0.1] /home/onur/.gradle/caches/8.13/transforms/9079a572cd9476560315beaea11f4a2a/transformed/firebase-auth-24.0.1/AndroidManifest.xml:23:9-148
 	android:targetSdkVersion
-		INJECTED from /home/onur/uottawa/fall/seg2105/project-group-9/app/src/main/AndroidManifest.xml
+		INJECTED from /home/onur/git/project-group-9-codex/app/src/main/AndroidManifest.xml
 	android:minSdkVersion
-		INJECTED from /home/onur/uottawa/fall/seg2105/project-group-9/app/src/main/AndroidManifest.xml
+		INJECTED from /home/onur/git/project-group-9-codex/app/src/main/AndroidManifest.xml
 activity#com.google.firebase.auth.internal.GenericIdpActivity
 ADDED from [com.google.firebase:firebase-auth:24.0.1] /home/onur/.gradle/caches/8.13/transforms/9079a572cd9476560315beaea11f4a2a/transformed/firebase-auth-24.0.1/AndroidManifest.xml:29:9-46:20
 	android:excludeFromRecents

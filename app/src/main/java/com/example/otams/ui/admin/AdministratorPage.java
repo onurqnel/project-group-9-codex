@@ -20,6 +20,8 @@ import com.example.otams.model.RequestStatus;
 import com.example.otams.ui.auth.LoginPage;
 import com.google.firebase.firestore.FirebaseFirestore;
 
+import java.util.List;
+
 public class AdministratorPage extends AppCompatActivity implements RequestsAdapter.OnRequestActionListener {
 
     private final Administrator administrator = new Administrator();

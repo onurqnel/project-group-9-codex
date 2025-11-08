@@ -7,7 +7,7 @@
     android:padding="15dp"
     android:gravity="center"
     android:background="@drawable/bg"
-    tools:context=".LoginPage">
+    tools:context=".ui.auth.LoginPage">
 
     <TextView
         android:layout_width="match_parent"
