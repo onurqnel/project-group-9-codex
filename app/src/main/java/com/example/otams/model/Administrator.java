@@ -20,6 +20,13 @@ public class Administrator extends User {
         setRole(UserRole.ADMINISTRATOR);
     }
 
+    public void setRequests(List<RegistrationRequest> newRequests) {
+        requests.clear();
+        if (newRequests != null) {
+            requests.addAll(newRequests);
+        }
+    }
+
     public List<RegistrationRequest> getRequests() {
         return requests;
     }
