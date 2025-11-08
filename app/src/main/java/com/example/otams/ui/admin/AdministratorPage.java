@@ -14,17 +14,15 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.otams.R;
 import com.example.otams.data.RegistrationRequestRepository;
+import com.example.otams.model.Administrator;
 import com.example.otams.model.RegistrationRequest;
 import com.example.otams.model.RequestStatus;
 import com.example.otams.ui.auth.LoginPage;
 import com.google.firebase.firestore.FirebaseFirestore;
 
-import java.util.ArrayList;
-import java.util.List;
-
 public class AdministratorPage extends AppCompatActivity implements RequestsAdapter.OnRequestActionListener {
 
-    private final List<RegistrationRequest> requests = new ArrayList<>();
+    private final Administrator administrator = new Administrator();
     private RequestStatus currentStatus = RequestStatus.PENDING;
 
     private RegistrationRequestRepository repository;
@@ -47,7 +45,7 @@ public class AdministratorPage extends AppCompatActivity implements RequestsAdap
         recyclerView = findViewById(R.id.requestsRecyclerView);
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
 
-        adapter = new RequestsAdapter(this, requests, this);
+        adapter = new RequestsAdapter(this, administrator.getRequests(), this);
         recyclerView.setAdapter(adapter);
 
         emptyStateText = findViewById(R.id.emptyStateText);
@@ -71,8 +69,7 @@ public class AdministratorPage extends AppCompatActivity implements RequestsAdap
         repository.fetchRequestsByStatus(status, new RegistrationRequestRepository.RequestsCallback() {
             @Override
             public void onSuccess(List<RegistrationRequest> items) {
-                requests.clear();
-                requests.addAll(items);
+                administrator.setRequests(items);
                 adapter.notifyDataSetChanged();
                 updateEmptyState();
             }
@@ -88,7 +85,7 @@ public class AdministratorPage extends AppCompatActivity implements RequestsAdap
     }
 
     private void updateEmptyState() {
-        if (requests.isEmpty()) {
+        if (administrator.getRequests().isEmpty()) {
             emptyStateText.setVisibility(View.VISIBLE);
             emptyStateText.setText(getEmptyStateText(currentStatus));
             recyclerView.setVisibility(View.GONE);
@@ -113,24 +110,38 @@ public class AdministratorPage extends AppCompatActivity implements RequestsAdap
 
     @Override
     public void onApprove(RegistrationRequest request) {
-        repository.approveRequest(request, new RepositoryCompletionCallback(R.string.request_approved));
+        repository.approveRequest(request,
+                new RepositoryCompletionCallback(request, R.string.request_approved, RequestStatus.APPROVED));
     }
 
     @Override
     public void onReject(RegistrationRequest request) {
-        repository.rejectRequest(request, new RepositoryCompletionCallback(R.string.request_rejected));
+        repository.rejectRequest(request,
+                new RepositoryCompletionCallback(request, R.string.request_rejected, RequestStatus.REJECTED));
     }
 
     private class RepositoryCompletionCallback implements RegistrationRequestRepository.CompletionCallback {
 
+        private final RegistrationRequest request;
         private final int successMessageResId;
+        private final RequestStatus targetStatus;
 
-        RepositoryCompletionCallback(@StringRes int successMessageResId) {
+        RepositoryCompletionCallback(RegistrationRequest request,
+                                     @StringRes int successMessageResId,
+                                     RequestStatus targetStatus) {
+            this.request = request;
             this.successMessageResId = successMessageResId;
+            this.targetStatus = targetStatus;
         }
 
         @Override
         public void onSuccess() {
+            if (targetStatus == RequestStatus.APPROVED) {
+                administrator.approve(request.getEmail());
+            } else if (targetStatus == RequestStatus.REJECTED) {
+                administrator.deny(request.getEmail());
+            }
+            adapter.notifyDataSetChanged();
             Toast.makeText(AdministratorPage.this, successMessageResId, Toast.LENGTH_SHORT).show();
             loadRequests(currentStatus);
         }

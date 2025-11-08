@@ -149,7 +149,12 @@ class SessionAdapter extends ListAdapter<Session, SessionAdapter.SessionViewHold
             if (status == null) {
                 status = SessionStatus.PENDING;
             }
-            statusText.setText(status.getDisplayName());
+
+            String statusLabel = session.getStatusLabel();
+            if (statusLabel == null) {
+                statusLabel = status.getDisplayName();
+            }
+            statusText.setText(statusLabel);
 
             updateButtons(session, status, listener);
 

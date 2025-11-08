@@ -64,9 +64,9 @@ public class Tutor extends User {
         return availableSlots;
     }
 
-    public void approveSessionRequest(Session session, SessionStatus status) {
+    public void updateSessionStatus(Session session, SessionStatus status) {
         if (session != null && status != null) {
-            session.setStatus(status.getFirestoreValue());
+            session.setStatusEnum(status);
         }
     }
 
@@ -75,12 +75,37 @@ public class Tutor extends User {
             return;
         }
         for (Session session : listOfSessions) {
-            session.setStatus(SessionStatus.APPROVED.getFirestoreValue());
+            session.setStatusEnum(SessionStatus.APPROVED);
         }
     }
 
-    public void createNewSlot(String tutorId, long start, long end, boolean manualApprovalRequired) {
-        Slot slot = new Slot(tutorId, start, end, manualApprovalRequired);
-        availableSlots.add(slot);
+    public Slot createNewSlot(String tutorId, long start, long end, boolean manualApprovalRequired) {
+        return createNewSlot(new Slot(tutorId, start, end, manualApprovalRequired));
+    }
+
+    public Slot createNewSlot(Slot slot) {
+        if (slot != null) {
+            availableSlots.add(slot);
+        }
+        return slot;
+    }
+
+    public boolean hasConflictingSlot(Slot candidate) {
+        if (candidate == null) {
+            return false;
+        }
+        for (Slot slot : availableSlots) {
+            if (slot.overlaps(candidate.getStartTimeMillis(), candidate.getEndTimeMillis())) {
+                return true;
+            }
+        }
+        return false;
+    }
+
+    public boolean removeSlot(Slot slot) {
+        if (slot == null) {
+            return false;
+        }
+        return availableSlots.remove(slot);
     }
 }

@@ -18,6 +18,7 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.otams.R;
 import com.example.otams.model.Slot;
+import com.example.otams.model.Tutor;
 import com.google.android.material.switchmaterial.SwitchMaterial;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.firestore.CollectionReference;
@@ -41,7 +42,7 @@ public class AvailabilityFragment extends Fragment implements AvailabilityAdapte
 
     private ListenerRegistration registration;
     private CollectionReference availabilityRef;
-    private final List<Slot> currentSlots = new ArrayList<>();
+    private final Tutor tutor = new Tutor();
 
     @Nullable
     @Override
@@ -104,8 +105,8 @@ public class AvailabilityFragment extends Fragment implements AvailabilityAdapte
         String tutorId = getCurrentTutorId();
         if (tutorId == null) {
             Toast.makeText(getContext(), R.string.availability_no_tutor, Toast.LENGTH_SHORT).show();
+            tutor.setAvailableSlots(new ArrayList<>());
             adapter.submitList(new ArrayList<>());
-            currentSlots.clear();
             return;
         }
 
@@ -128,9 +129,8 @@ public class AvailabilityFragment extends Fragment implements AvailabilityAdapte
                         }
                     }
 
-                    currentSlots.clear();
-                    currentSlots.addAll(slots);
-                    adapter.submitList(new ArrayList<>(slots));
+                    tutor.setAvailableSlots(slots);
+                    adapter.submitList(new ArrayList<>(tutor.getAvailableSlots()));
                 });
     }
 
@@ -168,23 +168,33 @@ public class AvailabilityFragment extends Fragment implements AvailabilityAdapte
         long startMillis = startCalendar.getTimeInMillis();
         long endMillis = endCalendar.getTimeInMillis();
 
-        for (Slot slot : currentSlots) {
-            if (slot.overlaps(startMillis, endMillis)) {
-                Toast.makeText(getContext(), R.string.availability_overlap_error, Toast.LENGTH_SHORT).show();
-                return;
-            }
+        boolean manualApproval = approvalSwitch.isChecked();
+        Slot slotCandidate = new Slot(tutorId, startMillis, endMillis, manualApproval);
+
+        if (!slotCandidate.isValidDuration()) {
+            Toast.makeText(getContext(), R.string.availability_increment_error, Toast.LENGTH_SHORT).show();
+            return;
         }
 
-        boolean manualApproval = approvalSwitch.isChecked();
-        Slot slot = new Slot(tutorId, startMillis, endMillis, manualApproval);
+        if (tutor.hasConflictingSlot(slotCandidate)) {
+            Toast.makeText(getContext(), R.string.availability_overlap_error, Toast.LENGTH_SHORT).show();
+            return;
+        }
+
+        Slot slot = tutor.createNewSlot(slotCandidate);
+        adapter.submitList(new ArrayList<>(tutor.getAvailableSlots()));
 
         availabilityRef.add(slot)
                 .addOnSuccessListener(documentReference -> Toast.makeText(getContext(),
                         R.string.availability_slot_created,
                         Toast.LENGTH_SHORT).show())
-                .addOnFailureListener(e -> Toast.makeText(getContext(),
-                        R.string.availability_slot_error,
-                        Toast.LENGTH_SHORT).show());
+                .addOnFailureListener(e -> {
+                    tutor.removeSlot(slot);
+                    adapter.submitList(new ArrayList<>(tutor.getAvailableSlots()));
+                    Toast.makeText(getContext(),
+                            R.string.availability_slot_error,
+                            Toast.LENGTH_SHORT).show();
+                });
     }
 
     @Nullable
@@ -233,9 +243,13 @@ public class AvailabilityFragment extends Fragment implements AvailabilityAdapte
 
         availabilityRef.document(id)
                 .delete()
-                .addOnSuccessListener(aVoid -> Toast.makeText(getContext(),
-                        R.string.availability_slot_deleted,
-                        Toast.LENGTH_SHORT).show())
+                .addOnSuccessListener(aVoid -> {
+                    tutor.removeSlot(slot);
+                    adapter.submitList(new ArrayList<>(tutor.getAvailableSlots()));
+                    Toast.makeText(getContext(),
+                            R.string.availability_slot_deleted,
+                            Toast.LENGTH_SHORT).show();
+                })
                 .addOnFailureListener(e -> Toast.makeText(getContext(),
                         R.string.availability_slot_error,
                         Toast.LENGTH_SHORT).show());

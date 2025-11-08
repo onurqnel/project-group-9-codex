@@ -17,6 +17,7 @@ import com.example.otams.R;
 import com.example.otams.model.Session;
 import com.example.otams.model.SessionStatus;
 import com.example.otams.model.Student;
+import com.example.otams.model.Tutor;
 import com.google.android.material.dialog.MaterialAlertDialogBuilder;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.firestore.CollectionReference;
@@ -38,6 +39,7 @@ public class SessionsFragment extends Fragment implements SessionAdapter.Session
 
     private ListenerRegistration registration;
     private CollectionReference sessionsRef;
+    private final Tutor tutor = new Tutor();
 
     @Nullable
     @Override
@@ -87,9 +89,9 @@ public class SessionsFragment extends Fragment implements SessionAdapter.Session
         String tutorId = getCurrentTutorId();
         if (tutorId == null) {
             Toast.makeText(getContext(), R.string.sessions_no_tutor, Toast.LENGTH_SHORT).show();
-            upcomingAdapter.submitList(new ArrayList<>());
-            pastAdapter.submitList(new ArrayList<>());
-            updateEmptyState();
+            tutor.setUpcomingSessions(new ArrayList<>());
+            tutor.setPastSessions(new ArrayList<>());
+            refreshSessionAdapters();
             return;
         }
 
@@ -124,15 +126,21 @@ public class SessionsFragment extends Fragment implements SessionAdapter.Session
                     Collections.sort(upcoming, comparator);
                     Collections.sort(past, comparator.reversed());
 
-                    upcomingAdapter.submitList(new ArrayList<>(upcoming));
-                    pastAdapter.submitList(new ArrayList<>(past));
-                    updateEmptyState();
+                    tutor.setUpcomingSessions(upcoming);
+                    tutor.setPastSessions(past);
+                    refreshSessionAdapters();
                 });
     }
 
+    private void refreshSessionAdapters() {
+        upcomingAdapter.submitList(new ArrayList<>(tutor.getUpcomingSessions()));
+        pastAdapter.submitList(new ArrayList<>(tutor.getPastSessions()));
+        updateEmptyState();
+    }
+
     private void updateEmptyState() {
-        boolean hasUpcoming = upcomingAdapter.getItemCount() > 0;
-        boolean hasPast = pastAdapter.getItemCount() > 0;
+        boolean hasUpcoming = !tutor.getUpcomingSessions().isEmpty();
+        boolean hasPast = !tutor.getPastSessions().isEmpty();
 
         upcomingEmptyText.setVisibility(hasUpcoming ? View.GONE : View.VISIBLE);
         pastEmptyText.setVisibility(hasPast ? View.GONE : View.VISIBLE);
@@ -202,7 +210,11 @@ public class SessionsFragment extends Fragment implements SessionAdapter.Session
 
         sessionsRef.document(id)
                 .update("status", status.getFirestoreValue())
-                .addOnSuccessListener(aVoid -> Toast.makeText(getContext(), successMessage, Toast.LENGTH_SHORT).show())
+                .addOnSuccessListener(aVoid -> {
+                    tutor.updateSessionStatus(session, status);
+                    refreshSessionAdapters();
+                    Toast.makeText(getContext(), successMessage, Toast.LENGTH_SHORT).show();
+                })
                 .addOnFailureListener(e -> Toast.makeText(getContext(), R.string.sessions_update_error, Toast.LENGTH_SHORT).show());
     }
 }
