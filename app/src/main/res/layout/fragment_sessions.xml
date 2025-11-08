@@ -32,9 +32,23 @@
             android:nestedScrollingEnabled="false"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/upcomingTitle"
+            app:layout_constraintTop_toBottomOf="@id/upcomingEmptyText"
             tools:itemCount="2"
             tools:listitem="@layout/item_session" />
+
+        <TextView
+            android:id="@+id/upcomingEmptyText"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:fontFamily="@font/poppins_regular"
+            android:gravity="center"
+            android:text="@string/sessions_upcoming_empty"
+            android:textColor="@android:color/darker_gray"
+            android:visibility="gone"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/upcomingTitle" />
 
         <!-- Past Sessions Section -->
         <TextView
@@ -57,9 +71,23 @@
             android:nestedScrollingEnabled="false"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/pastTitle"
+            app:layout_constraintTop_toBottomOf="@id/pastEmptyText"
             tools:itemCount="3"
             tools:listitem="@layout/item_session" />
+
+        <TextView
+            android:id="@+id/pastEmptyText"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:fontFamily="@font/poppins_regular"
+            android:gravity="center"
+            android:text="@string/sessions_past_empty"
+            android:textColor="@android:color/darker_gray"
+            android:visibility="gone"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/pastTitle" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 </ScrollView>

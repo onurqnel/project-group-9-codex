@@ -64,9 +64,9 @@ public class Tutor extends User {
         return availableSlots;
     }
 
-    public void approveSessionRequest(Session session, String approval) {
-        if (session != null) {
-            session.setApproval(approval);
+    public void approveSessionRequest(Session session, SessionStatus status) {
+        if (session != null && status != null) {
+            session.setStatus(status.getFirestoreValue());
         }
     }
 
@@ -75,12 +75,12 @@ public class Tutor extends User {
             return;
         }
         for (Session session : listOfSessions) {
-            session.setApproval(RequestStatus.APPROVED.getFirestoreValue());
+            session.setStatus(SessionStatus.APPROVED.getFirestoreValue());
         }
     }
 
-    public void createNewSlot(Tutor tutor, int start, int end, int date) {
-        Slot slot = new Slot(tutor, start, end, date);
+    public void createNewSlot(String tutorId, long start, long end, boolean manualApprovalRequired) {
+        Slot slot = new Slot(tutorId, start, end, manualApprovalRequired);
         availableSlots.add(slot);
     }
 }

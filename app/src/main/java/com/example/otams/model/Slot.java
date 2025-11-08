@@ -1,62 +1,94 @@
 package com.example.otams.model;
 
+import androidx.annotation.Nullable;
+
+import com.google.firebase.firestore.Exclude;
+
+import java.util.concurrent.TimeUnit;
+
 /**
  * Represents an available tutoring slot.
  */
 public class Slot {
 
-    private Tutor tutor;
-    private int startTime;
-    private int endTime;
-    private int date;
+    private String id;
+    private String tutorId;
+    private long startTimeMillis;
+    private long endTimeMillis;
+    private boolean manualApprovalRequired;
 
     public Slot() {
         // Required for Firestore.
     }
 
-    public Slot(Tutor tutor) {
-        this.tutor = tutor;
+    public Slot(String tutorId, long startTimeMillis, long endTimeMillis, boolean manualApprovalRequired) {
+        this.tutorId = tutorId;
+        this.startTimeMillis = startTimeMillis;
+        this.endTimeMillis = endTimeMillis;
+        this.manualApprovalRequired = manualApprovalRequired;
     }
 
-    public Slot(Tutor tutor, int start, int end, int date) {
-        this.tutor = tutor;
-        this.startTime = start;
-        this.endTime = end;
-        this.date = date;
+    public String getTutorId() {
+        return tutorId;
     }
 
-    public void setEndTime(int time) {
-        this.endTime = time;
+    public void setTutorId(String tutorId) {
+        this.tutorId = tutorId;
     }
 
-    public void setStartTime(int time) {
-        this.startTime = time;
+    public long getStartTimeMillis() {
+        return startTimeMillis;
     }
 
-    public void setDate(int date) {
-        this.date = date;
+    public void setStartTimeMillis(long startTimeMillis) {
+        this.startTimeMillis = startTimeMillis;
     }
 
-    public int getEndTime() {
-        return endTime;
+    public long getEndTimeMillis() {
+        return endTimeMillis;
     }
 
-    public int getStartTime() {
-        return startTime;
+    public void setEndTimeMillis(long endTimeMillis) {
+        this.endTimeMillis = endTimeMillis;
     }
 
-    public int getDate() {
-        return date;
+    public boolean isManualApprovalRequired() {
+        return manualApprovalRequired;
     }
 
-    public Tutor getTutor() {
-        return tutor;
+    public void setManualApprovalRequired(boolean manualApprovalRequired) {
+        this.manualApprovalRequired = manualApprovalRequired;
     }
 
-    public boolean validateTimes() {
-        if (startTime < 0 || endTime < 0) {
-            throw new IndexOutOfBoundsException("Time doesn't exist.");
-        }
-        return endTime - startTime == 30;
+    @Exclude
+    public String getId() {
+        return id;
+    }
+
+    public void setId(String id) {
+        this.id = id;
+    }
+
+    /**
+     * Returns whether the provided time range overlaps this slot.
+     */
+    public boolean overlaps(long startMillis, long endMillis) {
+        return startMillis < endTimeMillis && endMillis > startTimeMillis;
+    }
+
+    /**
+     * Ensures the slot represents a valid 30-minute increment or multiple.
+     */
+    public boolean isValidDuration() {
+        long difference = endTimeMillis - startTimeMillis;
+        return difference > 0 && difference % TimeUnit.MINUTES.toMillis(30) == 0;
+    }
+
+    /**
+     * Convenience for derived classes retrieving status strings.
+     */
+    @Nullable
+    public String getStatusLabel() {
+        return null;
     }
 }
