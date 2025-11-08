@@ -8,9 +8,14 @@
     <color name="soft_gold">#D9B98C</color>
 
     <!-- Support colors  -->
-    <color name="surface">#FFFFFF</color>     <!-- Cards/surfaces (light) -->
-    <color name="on_surface">#2C2C30</color>  <!-- Text on surfaces -->
-    <color name="on_primary">#FFFFFF</color>  <!-- Text on burgundy -->
+    <color name="surface">#FFFFFF</color>
+    <color name="on_surface">#2C2C30</color>
+    <color name="on_primary">#FFFFFF</color>
+
+    <!-- Status colors -->
+    <color name="status_pending">#FF9800</color>
+    <color name="status_approved">#4CAF50</color>
+    <color name="status_rejected">#F44336</color>
 
     <!-- Default colors -->
     <color name="black">#FF000000</color>

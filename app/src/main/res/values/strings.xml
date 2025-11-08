@@ -12,6 +12,58 @@
     <string name="logout">Logout</string>
     <string name="tutor">Tutor</string>
     <string name="student">Student</string>
-    <!-- TODO: Remove or change this placeholder text -->
-    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+    <!-- Home -->
+    <string name="logout_student_success">Logged out successfully.</string>
+    <string name="logout_tutor_success">Logged out successfully.</string>
+
+    <!-- Status pages -->
+    <string name="status_pending_title">Your request is pending!</string>
+    <string name="status_pending_message">Your account is awaiting administrator approval.</string>
+    <string name="status_approved_title">Your request was approved!</string>
+    <string name="status_approved_message">You can now log in to access your dashboard.</string>
+    <string name="status_rejected_title">Your request was rejected.</string>
+    <string name="status_rejected_message">Contact the administrator at 1-800-555-5555 for assistance.</string>
+    <string name="status_back_to_login">Back to login page</string>
+
+    <!-- Administrator -->
+    <string name="admin_welcome">Welcome, Administrator!</string>
+    <string name="admin_logged_out">Administrator logged out.</string>
+    <string name="admin_registration_requests_button">Registration Requests</string>
+    <string name="admin_rejected_requests_button">Rejected Requests</string>
+    <string name="error_loading_requests">Error loading requests: %1$s</string>
+    <string name="empty_pending_requests">No pending requests</string>
+    <string name="empty_rejected_requests">No rejected requests</string>
+    <string name="request_approved">Request approved successfully</string>
+    <string name="request_rejected">Request rejected</string>
+    <string name="error_request_action">Failed to update request: %1$s</string>
+    <string name="request_full_name_format">%1$s %2$s</string>
+    <string name="request_role_unknown">Unknown</string>
+    <string name="request_program_format">Program: %1$s</string>
+    <string name="request_degree_format">Degree: %1$s</string>
+    <string name="request_courses_format">Courses: %1$s</string>
+    <string name="rejected_requests_title">Previously Rejected User Registrations</string>
+    <string name="rejected_request_row">%1$s (%2$s)</string>
+
+    <!-- Registration -->
+    <string name="registration_fill_all_fields">Fill in all fields.</string>
+    <string name="registration_failed">Registration failed: %1$s</string>
+    <string name="registration_user_null">Account created, but user data is null.</string>
+    <string name="registration_account_created">Account created. Complete profile.</string>
+
+    <!-- Login -->
+    <string name="login_enter_credentials">Enter email and password</string>
+    <string name="login_admin_success">Logged in as Administrator</string>
+    <string name="login_failed">Authentication failed: %1$s</string>
+    <string name="login_no_request_found">Profile setup is not complete. Please finish your registration.</string>
+    <string name="login_request_parse_error">Unable to read your registration details.</string>
+    <string name="login_status_error">Error checking account status: %1$s</string>
+    <string name="login_success">Login Successful. Welcome!</string>
+
+    <!-- Tutor requests -->
+    <string name="requests_pending_title">Pending Requests</string>
+    <string name="requests_no_tutor">No tutor logged in.</string>
+    <string name="requests_approved">Request approved</string>
+    <string name="requests_rejected">Request rejected</string>
+    <string name="requests_action_error">Failed to update request status</string>
 </resources>
