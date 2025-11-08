@@ -9,9 +9,11 @@ import android.widget.Button;
 import android.widget.DatePicker;
 import android.widget.TimePicker;
 import android.widget.Toast;
+import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
+import androidx.annotation.StringRes;
 import androidx.fragment.app.Fragment;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
@@ -38,6 +40,7 @@ public class AvailabilityFragment extends Fragment implements AvailabilityAdapte
     private TimePicker startTimePicker;
     private TimePicker endTimePicker;
     private SwitchMaterial approvalSwitch;
+    private TextView errorText;
     private AvailabilityAdapter adapter;
 
     private ListenerRegistration registration;
@@ -53,6 +56,7 @@ public class AvailabilityFragment extends Fragment implements AvailabilityAdapte
         startTimePicker = view.findViewById(R.id.startTimePicker);
         endTimePicker = view.findViewById(R.id.endTimePicker);
         approvalSwitch = view.findViewById(R.id.approvalSwitch);
+        errorText = view.findViewById(R.id.availabilityErrorText);
 
         RecyclerView recyclerView = view.findViewById(R.id.availabilityRecyclerView);
         recyclerView.setLayoutManager(new LinearLayoutManager(getContext()));
@@ -104,7 +108,7 @@ public class AvailabilityFragment extends Fragment implements AvailabilityAdapte
 
         String tutorId = getCurrentTutorId();
         if (tutorId == null) {
-            Toast.makeText(getContext(), R.string.availability_no_tutor, Toast.LENGTH_SHORT).show();
+            showError(R.string.availability_no_tutor);
             tutor.setAvailableSlots(new ArrayList<>());
             adapter.submitList(new ArrayList<>());
             return;
@@ -114,7 +118,7 @@ public class AvailabilityFragment extends Fragment implements AvailabilityAdapte
                 .orderBy("startTimeMillis", Query.Direction.ASCENDING)
                 .addSnapshotListener((snapshots, error) -> {
                     if (error != null) {
-                        Toast.makeText(getContext(), R.string.availability_load_error, Toast.LENGTH_SHORT).show();
+                        showError(R.string.availability_load_error);
                         return;
                     }
 
@@ -131,13 +135,14 @@ public class AvailabilityFragment extends Fragment implements AvailabilityAdapte
 
                     tutor.setAvailableSlots(slots);
                     adapter.submitList(new ArrayList<>(tutor.getAvailableSlots()));
+                    clearError();
                 });
     }
 
     private void attemptCreateSlot() {
         String tutorId = getCurrentTutorId();
         if (tutorId == null) {
-            Toast.makeText(getContext(), R.string.availability_no_tutor, Toast.LENGTH_SHORT).show();
+            showError(R.string.availability_no_tutor);
             return;
         }
 
@@ -145,23 +150,23 @@ public class AvailabilityFragment extends Fragment implements AvailabilityAdapte
         Calendar endCalendar = buildCalendarFromInputs(endTimePicker);
 
         if (startCalendar == null || endCalendar == null) {
-            Toast.makeText(getContext(), R.string.availability_time_error, Toast.LENGTH_SHORT).show();
+            showError(R.string.availability_time_error);
             return;
         }
 
         if (startCalendar.get(Calendar.MINUTE) % 30 != 0 || endCalendar.get(Calendar.MINUTE) % 30 != 0) {
-            Toast.makeText(getContext(), R.string.availability_increment_error, Toast.LENGTH_SHORT).show();
+            showError(R.string.availability_increment_error);
             return;
         }
 
         if (!endCalendar.after(startCalendar)) {
-            Toast.makeText(getContext(), R.string.availability_end_after_start, Toast.LENGTH_SHORT).show();
+            showError(R.string.availability_end_after_start);
             return;
         }
 
         long now = System.currentTimeMillis();
         if (startCalendar.getTimeInMillis() < now) {
-            Toast.makeText(getContext(), R.string.availability_past_error, Toast.LENGTH_SHORT).show();
+            showError(R.string.availability_past_error);
             return;
         }
 
@@ -172,12 +177,12 @@ public class AvailabilityFragment extends Fragment implements AvailabilityAdapte
         Slot slotCandidate = new Slot(tutorId, startMillis, endMillis, manualApproval);
 
         if (!slotCandidate.isValidDuration()) {
-            Toast.makeText(getContext(), R.string.availability_increment_error, Toast.LENGTH_SHORT).show();
+            showError(R.string.availability_increment_error);
             return;
         }
 
         if (tutor.hasConflictingSlot(slotCandidate)) {
-            Toast.makeText(getContext(), R.string.availability_overlap_error, Toast.LENGTH_SHORT).show();
+            showError(R.string.availability_overlap_error);
             return;
         }
 
@@ -185,15 +190,16 @@ public class AvailabilityFragment extends Fragment implements AvailabilityAdapte
         adapter.submitList(new ArrayList<>(tutor.getAvailableSlots()));
 
         availabilityRef.add(slot)
-                .addOnSuccessListener(documentReference -> Toast.makeText(getContext(),
-                        R.string.availability_slot_created,
-                        Toast.LENGTH_SHORT).show())
+                .addOnSuccessListener(documentReference -> {
+                    clearError();
+                    Toast.makeText(getContext(),
+                            R.string.availability_slot_created,
+                            Toast.LENGTH_SHORT).show();
+                })
                 .addOnFailureListener(e -> {
                     tutor.removeSlot(slot);
                     adapter.submitList(new ArrayList<>(tutor.getAvailableSlots()));
-                    Toast.makeText(getContext(),
-                            R.string.availability_slot_error,
-                            Toast.LENGTH_SHORT).show();
+                    showError(R.string.availability_slot_error);
                 });
     }
 
@@ -237,7 +243,7 @@ public class AvailabilityFragment extends Fragment implements AvailabilityAdapte
     public void onDeleteSlot(@NonNull Slot slot) {
         String id = slot.getId();
         if (id == null) {
-            Toast.makeText(getContext(), R.string.availability_slot_error, Toast.LENGTH_SHORT).show();
+            showError(R.string.availability_slot_error);
             return;
         }
 
@@ -246,12 +252,27 @@ public class AvailabilityFragment extends Fragment implements AvailabilityAdapte
                 .addOnSuccessListener(aVoid -> {
                     tutor.removeSlot(slot);
                     adapter.submitList(new ArrayList<>(tutor.getAvailableSlots()));
+                    clearError();
                     Toast.makeText(getContext(),
                             R.string.availability_slot_deleted,
                             Toast.LENGTH_SHORT).show();
                 })
-                .addOnFailureListener(e -> Toast.makeText(getContext(),
-                        R.string.availability_slot_error,
-                        Toast.LENGTH_SHORT).show());
+                .addOnFailureListener(e -> showError(R.string.availability_slot_error));
+    }
+
+    private void showError(@StringRes int messageRes) {
+        if (errorText == null) {
+            return;
+        }
+        errorText.setText(messageRes);
+        errorText.setVisibility(View.VISIBLE);
+    }
+
+    private void clearError() {
+        if (errorText == null) {
+            return;
+        }
+        errorText.setText("");
+        errorText.setVisibility(View.GONE);
     }
 }

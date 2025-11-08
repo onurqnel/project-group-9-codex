@@ -114,6 +114,16 @@ public class SessionsFragment extends Fragment implements SessionAdapter.Session
                             }
                             session.setId(document.getId());
 
+                            SessionStatus status = session.getStatusEnum();
+                            if (status == null) {
+                                status = SessionStatus.PENDING;
+                                session.setStatusEnum(status);
+                            }
+
+                            if (status == SessionStatus.PENDING) {
+                                continue;
+                            }
+
                             if (session.getEndTimeMillis() >= now) {
                                 upcoming.add(session);
                             } else {
