@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<incidents format="6" by="lint 8.13.0" type="partial_results">
+    <map id="UnsafeIntentLaunch">
+            <map id="unprotected">
+                <entry
+                    name="com.example.otams.AdministratorHome"
+                    boolean="true"/>
+                <entry
+                    name="com.example.otams.LandingActivity"
+                    boolean="true"/>
+                <entry
+                    name="com.example.otams.LoginPage"
+                    boolean="true"/>
+                <entry
+                    name="com.example.otams.RegisterPage"
+                    boolean="true"/>
+                <entry
+                    name="com.example.otams.StudentHome"
+                    boolean="true"/>
+                <entry
+                    name="com.example.otams.TutorHome"
+                    boolean="true"/>
+            </map>
+    </map>
+    <map id="UnusedResources">
+        <location id="R.color.black"
+            file="${:app*debug*MAIN*sourceProvider*0*resDir*0}/values/colors.xml"
+            line="16"
+            column="12"
+            startOffset="606"
+            endLine="16"
+            endColumn="24"
+            endOffset="618"/>
+        <location id="R.drawable.done_icon"
+            file="${:app*debug*MAIN*sourceProvider*0*resDir*0}/drawable/done_icon.xml"
+            line="1"
+            column="1"
+            startOffset="0"
+            endLine="5"
+            endColumn="10"
+            endOffset="334"/>
+        <location id="R.drawable.logo"
+            file="${:app*debug*MAIN*sourceProvider*0*resDir*0}/drawable/logo.png"/>
+        <location id="R.drawable.password_icon"
+            file="${:app*debug*MAIN*sourceProvider*0*resDir*0}/drawable/password_icon.xml"
+            line="1"
+            column="1"
+            startOffset="0"
+            endLine="5"
+            endColumn="10"
+            endOffset="516"/>
+        <location id="R.string.click_to_login"
+            file="${:app*debug*MAIN*sourceProvider*0*resDir*0}/values/strings.xml"
+            line="10"
+            column="13"
+            startOffset="383"
+            endLine="10"
+            endColumn="34"
+            endOffset="404"/>
+        <location id="R.string.logo_of_the_app"
+            file="${:app*debug*MAIN*sourceProvider*0*resDir*0}/values/strings.xml"
+            line="3"
+            column="13"
+            startOffset="67"
+            endLine="3"
+            endColumn="35"
+            endOffset="89"/>
+        <location id="R.string.otams"
+            file="${:app*debug*MAIN*sourceProvider*0*resDir*0}/values/strings.xml"
+            line="4"
+            column="13"
+            startOffset="127"
+            endLine="4"
+            endColumn="25"
+            endOffset="139"/>
+        <location id="R.string.welcome"
+            file="${:app*debug*MAIN*sourceProvider*0*resDir*0}/values/strings.xml"
+            line="5"
+            column="13"
+            startOffset="167"
+            endLine="5"
+            endColumn="27"
+            endOffset="181"/>
+        <location id="R.style.Theme_YourAppName"
+            file="${:app*debug*MAIN*sourceProvider*0*resDir*0}/values/styles.xml"
+            line="4"
+            column="12"
+            startOffset="110"
+            endLine="4"
+            endColumn="36"
+            endOffset="134"/>
+        <location id="R.style.Widget_Otams_Button_Outlined"
+            file="${:app*debug*MAIN*sourceProvider*0*resDir*0}/values/themes.xml"
+            line="49"
+            column="12"
+            startOffset="2066"
+            endLine="49"
+            endColumn="47"
+            endOffset="2101"/>
+        <entry
+            name="model"
+            string="color[off_white(U),burgundy_red(U),white(U),cool_sand(U),slate_gray(U),soft_gold(U),surface(U),on_surface(U),on_primary(U),black(D)],drawable[bg(U),bg2(U),done_icon(D),ic_launcher_background(U),ic_launcher_foreground(U),ic_launcher_foreground_1(R),logo(D),password_icon(D)],font[poppins_semibold(R),poppins_regular(R),roboto_regular(R)],id[welcomeText(U),logoutButton(U),landingPage(D),getStarted(U),headingLanding(U),subheadingLanding(D),email(U),password(U),progressBar(U),btn_login(U),registerNow(U),main(U),user_details(D),logout(D),radioGroupRole(U),radioStudent(U),radioTutor(U),btn_register(U),loginNow(U),root(D),textView9(U),firstNameLayout(U),firstName(U),textView(U),lastNameLayout(U),lastName(U),textView2(U),phoneNumLayout(U),phoneNum(U),textView3(U),programOfStudyLayout(D),programOfStudy(U),signUpButton(D),linearLayout2(D),textView4(U),editTextFirstName(D),textView8(U),editTextLastName(D),textView5(U),editTextPhone(D),textView7(U),coursesOfferedLayout(U),editTextCourses(D),textView6(U),degreeLayout(D),editTextDegree(D)],layout[activity_administrator_home(U),activity_landing(U),activity_login(U),activity_main(U),activity_register(U),activity_student_home(U),activity_tutor_home(U)],mipmap[ic_launcher(U),ic_launcher_round(U)],string[app_name(U),login(U),email(U),password(U),click_to_register(U),logout(U),student(U),tutor(U),register(U),logo_of_the_app(D),otams(D),welcome(D),click_to_login(D)],style[Theme_Otams(U),Base_Theme_Otams(U),WhiteRadioButtonTheme(U),Theme_YourAppName(D),Theme_MaterialComponents_DayNight_NoActionBar(E),ThemeOverlay_MaterialComponents_Light(R),Theme_Material3_DayNight_NoActionBar(R),Shape_MediumRadius(U),Widget_Otams_Button(U),Shape(U),ShapeAppearance_Material3_MediumComponent(R),Widget_Material3_Button(R),Widget_Otams_Button_Outlined(D),Widget_Material3_Button_OutlinedButton(E)],xml[data_extraction_rules(U),backup_rules(U)];e^f,44^b^5a^0^1^19^12^18^13,45^a^12^4d^14^4e^4f^13^50,46^2^51,47^a^52^5b^53^4e^4f^54^4d,48^12^13^15^29^2a^2c^2d^2f^30^32^16,49^12^13^15^37^2a^39^2d^3b^30^3d^3e^40^16,4a^d^e,4b^d^e,59^5a,5a^5f^1^8^5^4^0^6^7^3^60^14^61,5b^5e,5c^5d^a,60^62,61^64^12^8^1,62^63,65^66^12^4;;;"/>
+    </map>
+
+</incidents>

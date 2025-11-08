@@ -1,0 +1,727 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<incidents format="6" by="lint 8.13.0" type="incidents">
+
+    <incident
+        id="AndroidGradlePluginVersion"
+        severity="warning"
+        message="A newer version of Gradle than 8.13 is available: 8.14.3">
+        <fix-replace
+            description="Update to 8.14.3"
+            oldString="8.13"
+            replacement="8.14.3"
+            priority="0"/>
+        <location
+            file="$HOME/uottawa/fall/seg2105/project-group-9/gradle/wrapper/gradle-wrapper.properties"
+            line="4"
+            column="17"
+            startOffset="111"
+            endLine="4"
+            endColumn="79"
+            endOffset="173"/>
+    </incident>
+
+    <incident
+        id="GradleDependency"
+        severity="warning"
+        message="A newer version of com.google.firebase:firebase-bom than 34.3.0 is available: 34.4.0">
+        <fix-replace
+            description="Change to 34.4.0"
+            family="Update versions"
+            oldString="34.3.0"
+            replacement="34.4.0"
+            priority="0"/>
+        <location
+            file="${:app*projectDir}/build.gradle.kts"
+            line="38"
+            column="20"
+            startOffset="879"
+            endLine="38"
+            endColumn="71"
+            endOffset="930"/>
+    </incident>
+
+    <incident
+        id="Overdraw"
+        severity="warning"
+        message="Possible overdraw: Root element paints background `@drawable/bg2` with a theme that also paints a background (inferred theme is `@style/Theme.Otams`)">
+        <location
+            file="${:app*debug*MAIN*sourceProvider*0*resDir*0}/layout/activity_landing.xml"
+            line="10"
+            column="5"
+            startOffset="412"
+            endLine="10"
+            endColumn="39"
+            endOffset="446"/>
+    </incident>
+
+    <incident
+        id="Overdraw"
+        severity="warning"
+        message="Possible overdraw: Root element paints background `@drawable/bg` with a theme that also paints a background (inferred theme is `@style/Theme_Otams`)">
+        <location
+            file="${:app*debug*MAIN*sourceProvider*0*resDir*0}/layout/activity_login.xml"
+            line="9"
+            column="5"
+            startOffset="339"
+            endLine="9"
+            endColumn="38"
+            endOffset="372"/>
+    </incident>
+
+    <incident
+        id="Overdraw"
+        severity="warning"
+        message="Possible overdraw: Root element paints background `@color/white` with a theme that also paints a background (inferred theme is `@style/Theme.Otams`)">
+        <location
+            file="${:app*debug*MAIN*sourceProvider*0*resDir*0}/layout/activity_main.xml"
+            line="10"
+            column="5"
+            startOffset="395"
+            endLine="10"
+            endColumn="38"
+            endOffset="428"/>
+    </incident>
+
+    <incident
+        id="Overdraw"
+        severity="warning"
+        message="Possible overdraw: Root element paints background `@drawable/bg` with a theme that also paints a background (inferred theme is `@style/Theme_Otams`)">
+        <location
+            file="${:app*debug*MAIN*sourceProvider*0*resDir*0}/layout/activity_register.xml"
+            line="6"
+            column="5"
+            startOffset="248"
+            endLine="6"
+            endColumn="38"
+            endOffset="281"/>
+    </incident>
+
+    <incident
+        id="IconLocation"
+        severity="warning"
+        message="Found bitmap drawable `res/drawable/bg.jpg` in densityless folder">
+        <location
+            file="${:app*debug*MAIN*sourceProvider*0*resDir*0}/drawable/bg.jpg"/>
+    </incident>
+
+    <incident
+        id="IconLocation"
+        severity="warning"
+        message="Found bitmap drawable `res/drawable/bg2.png` in densityless folder">
+        <location
+            file="${:app*debug*MAIN*sourceProvider*0*resDir*0}/drawable/bg2.png"/>
+    </incident>
+
+    <incident
+        id="IconLocation"
+        severity="warning"
+        message="Found bitmap drawable `res/drawable/logo.png` in densityless folder">
+        <location
+            file="${:app*debug*MAIN*sourceProvider*0*resDir*0}/drawable/logo.png"/>
+    </incident>
+
+    <incident
+        id="UseTomlInstead"
+        severity="warning"
+        message="Use version catalog instead">
+        <fix-composite
+            description="Replace with new library catalog declaration for google-firebase-bom"
+            robot="true">
+            <fix-replace
+                description="Replace with firebaseBomVersion = &quot;34.3.0&quot;..."
+                robot="true"
+                oldString="_lint_insert_begin_"
+                replacement="firebaseBomVersion = &quot;34.3.0&quot;&#xA;"
+                priority="0">
+                <range
+                    file="$HOME/uottawa/fall/seg2105/project-group-9/gradle/libs.versions.toml"
+                    startOffset="26"
+                    endOffset="26"/>
+            </fix-replace>
+            <fix-replace
+                description="Replace with google-firebase-bom = { module = &quot;com.google.firebase:firebase-bom&quot;, version.ref = &quot;firebaseBomVersion&quot; }..."
+                robot="true"
+                oldString="_lint_insert_begin_"
+                replacement="google-firebase-bom = { module = &quot;com.google.firebase:firebase-bom&quot;, version.ref = &quot;firebaseBomVersion&quot; }&#xA;"
+                priority="0">
+                <range
+                    file="$HOME/uottawa/fall/seg2105/project-group-9/gradle/libs.versions.toml"
+                    startOffset="247"
+                    endOffset="247"/>
+            </fix-replace>
+            <fix-replace
+                description="Replace with libs.google.firebase.bom"
+                robot="true"
+                replacement="libs.google.firebase.bom"
+                priority="0">
+                <range
+                    file="${:app*projectDir}/build.gradle.kts"
+                    startOffset="879"
+                    endOffset="930"/>
+            </fix-replace>
+        </fix-composite>
+        <location
+            file="${:app*projectDir}/build.gradle.kts"
+            line="38"
+            column="20"
+            startOffset="879"
+            endLine="38"
+            endColumn="71"
+            endOffset="930"/>
+    </incident>
+
+    <incident
+        id="UseTomlInstead"
+        severity="warning"
+        message="Use version catalog instead (com.google.firebase:firebase-auth is already available as `firebase-auth`, but using version 24.0.1 instead)">
+        <fix-alternatives>
+            <fix-composite
+                description="Replace with new library catalog declaration for com-google-firebase-firebase-auth"
+                robot="true"
+                independent="true">
+                <fix-replace
+                    description="Replace with com-google-firebase-firebase-auth = { module = &quot;com.google.firebase:firebase-auth&quot; }..."
+                    robot="true"
+                    independent="true"
+                    oldString="_lint_insert_begin_"
+                    replacement="com-google-firebase-firebase-auth = { module = &quot;com.google.firebase:firebase-auth&quot; }&#xA;"
+                    priority="0">
+                    <range
+                        file="$HOME/uottawa/fall/seg2105/project-group-9/gradle/libs.versions.toml"
+                        startOffset="247"
+                        endOffset="247"/>
+                </fix-replace>
+                <fix-replace
+                    description="Replace with libs.com.google.firebase.firebase.auth"
+                    robot="true"
+                    independent="true"
+                    replacement="libs.com.google.firebase.firebase.auth"
+                    priority="0">
+                    <range
+                        file="${:app*projectDir}/build.gradle.kts"
+                        startOffset="951"
+                        endOffset="986"/>
+                </fix-replace>
+            </fix-composite>
+            <fix-replace
+                description="Replace with existing version catalog reference `firebase-auth` (version 24.0.1)"
+                replacement="libs.firebase.auth"
+                priority="0">
+                <range
+                    file="${:app*projectDir}/build.gradle.kts"
+                    startOffset="951"
+                    endOffset="986"/>
+            </fix-replace>
+        </fix-alternatives>
+        <location
+            file="${:app*projectDir}/build.gradle.kts"
+            line="39"
+            column="20"
+            startOffset="951"
+            endLine="39"
+            endColumn="55"
+            endOffset="986"/>
+    </incident>
+
+    <incident
+        id="UseTomlInstead"
+        severity="warning"
+        message="Use version catalog instead">
+        <fix-composite
+            description="Replace with new library catalog declaration for google-firebase-firestore"
+            robot="true">
+            <fix-replace
+                description="Replace with google-firebase-firestore = { module = &quot;com.google.firebase:firebase-firestore&quot; }..."
+                robot="true"
+                oldString="_lint_insert_begin_"
+                replacement="google-firebase-firestore = { module = &quot;com.google.firebase:firebase-firestore&quot; }&#xA;"
+                priority="0">
+                <range
+                    file="$HOME/uottawa/fall/seg2105/project-group-9/gradle/libs.versions.toml"
+                    startOffset="247"
+                    endOffset="247"/>
+            </fix-replace>
+            <fix-replace
+                description="Replace with libs.google.firebase.firestore"
+                robot="true"
+                replacement="libs.google.firebase.firestore"
+                priority="0">
+                <range
+                    file="${:app*projectDir}/build.gradle.kts"
+                    startOffset="1007"
+                    endOffset="1047"/>
+            </fix-replace>
+        </fix-composite>
+        <location
+            file="${:app*projectDir}/build.gradle.kts"
+            line="40"
+            column="20"
+            startOffset="1007"
+            endLine="40"
+            endColumn="60"
+            endOffset="1047"/>
+    </incident>
+
+    <incident
+        id="SetTextI18n"
+        severity="warning"
+        message="String literal in `setText` can not be translated. Use Android resources instead.">
+        <location
+            file="${:app*debug*MAIN*sourceProvider*0*javaDir*0}/com/example/otams/AdministratorHome.java"
+            line="28"
+            column="33"
+            startOffset="826"
+            endLine="28"
+            endColumn="58"
+            endOffset="851"/>
+    </incident>
+
+    <incident
+        id="SetTextI18n"
+        severity="warning"
+        message="String literal in `setText` can not be translated. Use Android resources instead.">
+        <location
+            file="${:app*debug*MAIN*sourceProvider*0*javaDir*0}/com/example/otams/StudentHome.java"
+            line="35"
+            column="33"
+            startOffset="1154"
+            endLine="35"
+            endColumn="52"
+            endOffset="1173"/>
+    </incident>
+
+    <incident
+        id="SetTextI18n"
+        severity="warning"
+        message="String literal in `setText` can not be translated. Use Android resources instead.">
+        <location
+            file="${:app*debug*MAIN*sourceProvider*0*javaDir*0}/com/example/otams/TutorHome.java"
+            line="28"
+            column="33"
+            startOffset="839"
+            endLine="28"
+            endColumn="50"
+            endOffset="856"/>
+    </incident>
+
+    <incident
+        id="HardcodedText"
+        severity="warning"
+        message="Hardcoded string &quot;Welcome Administrator&quot;, should use `@string` resource">
+        <location
+            file="${:app*debug*MAIN*sourceProvider*0*resDir*0}/layout/activity_administrator_home.xml"
+            line="13"
+            column="9"
+            startOffset="435"
+            endLine="13"
+            endColumn="45"
+            endOffset="471"/>
+    </incident>
+
+    <incident
+        id="HardcodedText"
+        severity="warning"
+        message="Hardcoded string &quot;Logout&quot;, should use `@string` resource">
+        <location
+            file="${:app*debug*MAIN*sourceProvider*0*resDir*0}/layout/activity_administrator_home.xml"
+            line="23"
+            column="9"
+            startOffset="761"
+            endLine="23"
+            endColumn="30"
+            endOffset="782"/>
+    </incident>
+
+    <incident
+        id="HardcodedText"
+        severity="warning"
+        message="Hardcoded string &quot;Get Started&quot;, should use `@string` resource">
+        <location
+            file="${:app*debug*MAIN*sourceProvider*0*resDir*0}/layout/activity_landing.xml"
+            line="26"
+            column="13"
+            startOffset="1057"
+            endLine="26"
+            endColumn="39"
+            endOffset="1083"/>
+    </incident>
+
+    <incident
+        id="HardcodedText"
+        severity="warning"
+        message="Hardcoded string &quot;Tutor Academy&quot;, should use `@string` resource">
+        <location
+            file="${:app*debug*MAIN*sourceProvider*0*resDir*0}/layout/activity_landing.xml"
+            line="43"
+            column="13"
+            startOffset="1846"
+            endLine="43"
+            endColumn="41"
+            endOffset="1874"/>
+    </incident>
+
+    <incident
+        id="HardcodedText"
+        severity="warning"
+        message="Hardcoded string &quot;Welcome to&quot;, should use `@string` resource">
+        <location
+            file="${:app*debug*MAIN*sourceProvider*0*resDir*0}/layout/activity_landing.xml"
+            line="62"
+            column="13"
+            startOffset="2664"
+            endLine="62"
+            endColumn="38"
+            endOffset="2689"/>
+    </incident>
+
+    <incident
+        id="HardcodedText"
+        severity="warning"
+        message="Hardcoded string &quot;User Details&quot;, should use `@string` resource">
+        <location
+            file="${:app*debug*MAIN*sourceProvider*0*resDir*0}/layout/activity_main.xml"
+            line="17"
+            column="9"
+            startOffset="619"
+            endLine="17"
+            endColumn="36"
+            endOffset="646"/>
+    </incident>
+
+    <incident
+        id="HardcodedText"
+        severity="warning"
+        message="Hardcoded string &quot;Welcome Student&quot;, should use `@string` resource">
+        <location
+            file="${:app*debug*MAIN*sourceProvider*0*resDir*0}/layout/activity_student_home.xml"
+            line="16"
+            column="9"
+            startOffset="629"
+            endLine="16"
+            endColumn="39"
+            endOffset="659"/>
+    </incident>
+
+    <incident
+        id="HardcodedText"
+        severity="warning"
+        message="Hardcoded string &quot;Please enter your first name:&quot;, should use `@string` resource">
+        <location
+            file="${:app*debug*MAIN*sourceProvider*0*resDir*0}/layout/activity_student_home.xml"
+            line="31"
+            column="9"
+            startOffset="1202"
+            endLine="31"
+            endColumn="53"
+            endOffset="1246"/>
+    </incident>
+
+    <incident
+        id="HardcodedText"
+        severity="warning"
+        message="Hardcoded string &quot;First Name&quot;, should use `@string` resource">
+        <location
+            file="${:app*debug*MAIN*sourceProvider*0*resDir*0}/layout/activity_student_home.xml"
+            line="50"
+            column="13"
+            startOffset="2049"
+            endLine="50"
+            endColumn="38"
+            endOffset="2074"/>
+    </incident>
+
+    <incident
+        id="HardcodedText"
+        severity="warning"
+        message="Hardcoded string &quot;Please enter your last name:&quot;, should use `@string` resource">
+        <location
+            file="${:app*debug*MAIN*sourceProvider*0*resDir*0}/layout/activity_student_home.xml"
+            line="60"
+            column="9"
+            startOffset="2419"
+            endLine="60"
+            endColumn="52"
+            endOffset="2462"/>
+    </incident>
+
+    <incident
+        id="HardcodedText"
+        severity="warning"
+        message="Hardcoded string &quot;Last Name&quot;, should use `@string` resource">
+        <location
+            file="${:app*debug*MAIN*sourceProvider*0*resDir*0}/layout/activity_student_home.xml"
+            line="79"
+            column="13"
+            startOffset="3266"
+            endLine="79"
+            endColumn="37"
+            endOffset="3290"/>
+    </incident>
+
+    <incident
+        id="HardcodedText"
+        severity="warning"
+        message="Hardcoded string &quot;Please enter your phone number:&quot;, should use `@string` resource">
+        <location
+            file="${:app*debug*MAIN*sourceProvider*0*resDir*0}/layout/activity_student_home.xml"
+            line="89"
+            column="9"
+            startOffset="3636"
+            endLine="89"
+            endColumn="55"
+            endOffset="3682"/>
+    </incident>
+
+    <incident
+        id="HardcodedText"
+        severity="warning"
+        message="Hardcoded string &quot;Phone Number&quot;, should use `@string` resource">
+        <location
+            file="${:app*debug*MAIN*sourceProvider*0*resDir*0}/layout/activity_student_home.xml"
+            line="108"
+            column="13"
+            startOffset="4486"
+            endLine="108"
+            endColumn="40"
+            endOffset="4513"/>
+    </incident>
+
+    <incident
+        id="HardcodedText"
+        severity="warning"
+        message="Hardcoded string &quot;Please enter your field of study:&quot;, should use `@string` resource">
+        <location
+            file="${:app*debug*MAIN*sourceProvider*0*resDir*0}/layout/activity_student_home.xml"
+            line="119"
+            column="9"
+            startOffset="4897"
+            endLine="119"
+            endColumn="57"
+            endOffset="4945"/>
+    </incident>
+
+    <incident
+        id="HardcodedText"
+        severity="warning"
+        message="Hardcoded string &quot;Program of study&quot;, should use `@string` resource">
+        <location
+            file="${:app*debug*MAIN*sourceProvider*0*resDir*0}/layout/activity_student_home.xml"
+            line="138"
+            column="13"
+            startOffset="5761"
+            endLine="138"
+            endColumn="44"
+            endOffset="5792"/>
+    </incident>
+
+    <incident
+        id="HardcodedText"
+        severity="warning"
+        message="Hardcoded string &quot;Sign Up&quot;, should use `@string` resource">
+        <location
+            file="${:app*debug*MAIN*sourceProvider*0*resDir*0}/layout/activity_student_home.xml"
+            line="147"
+            column="9"
+            startOffset="6085"
+            endLine="147"
+            endColumn="31"
+            endOffset="6107"/>
+    </incident>
+
+    <incident
+        id="HardcodedText"
+        severity="warning"
+        message="Hardcoded string &quot;Logout&quot;, should use `@string` resource">
+        <location
+            file="${:app*debug*MAIN*sourceProvider*0*resDir*0}/layout/activity_student_home.xml"
+            line="159"
+            column="9"
+            startOffset="6561"
+            endLine="159"
+            endColumn="30"
+            endOffset="6582"/>
+    </incident>
+
+    <incident
+        id="HardcodedText"
+        severity="warning"
+        message="Hardcoded string &quot;Welcome Tutor&quot;, should use `@string` resource">
+        <location
+            file="${:app*debug*MAIN*sourceProvider*0*resDir*0}/layout/activity_tutor_home.xml"
+            line="17"
+            column="9"
+            startOffset="678"
+            endLine="17"
+            endColumn="37"
+            endOffset="706"/>
+    </incident>
+
+    <incident
+        id="HardcodedText"
+        severity="warning"
+        message="Hardcoded string &quot;Please enter your first name:&quot;, should use `@string` resource">
+        <location
+            file="${:app*debug*MAIN*sourceProvider*0*resDir*0}/layout/activity_tutor_home.xml"
+            line="32"
+            column="9"
+            startOffset="1263"
+            endLine="32"
+            endColumn="53"
+            endOffset="1307"/>
+    </incident>
+
+    <incident
+        id="HardcodedText"
+        severity="warning"
+        message="Hardcoded string &quot;First Name&quot;, should use `@string` resource">
+        <location
+            file="${:app*debug*MAIN*sourceProvider*0*resDir*0}/layout/activity_tutor_home.xml"
+            line="51"
+            column="13"
+            startOffset="2118"
+            endLine="51"
+            endColumn="38"
+            endOffset="2143"/>
+    </incident>
+
+    <incident
+        id="HardcodedText"
+        severity="warning"
+        message="Hardcoded string &quot;Please enter your last name:&quot;, should use `@string` resource">
+        <location
+            file="${:app*debug*MAIN*sourceProvider*0*resDir*0}/layout/activity_tutor_home.xml"
+            line="61"
+            column="9"
+            startOffset="2489"
+            endLine="61"
+            endColumn="52"
+            endOffset="2532"/>
+    </incident>
+
+    <incident
+        id="HardcodedText"
+        severity="warning"
+        message="Hardcoded string &quot;Last Name&quot;, should use `@string` resource">
+        <location
+            file="${:app*debug*MAIN*sourceProvider*0*resDir*0}/layout/activity_tutor_home.xml"
+            line="80"
+            column="13"
+            startOffset="3345"
+            endLine="80"
+            endColumn="37"
+            endOffset="3369"/>
+    </incident>
+
+    <incident
+        id="HardcodedText"
+        severity="warning"
+        message="Hardcoded string &quot;Please enter your phone number:&quot;, should use `@string` resource">
+        <location
+            file="${:app*debug*MAIN*sourceProvider*0*resDir*0}/layout/activity_tutor_home.xml"
+            line="90"
+            column="9"
+            startOffset="3715"
+            endLine="90"
+            endColumn="55"
+            endOffset="3761"/>
+    </incident>
+
+    <incident
+        id="HardcodedText"
+        severity="warning"
+        message="Hardcoded string &quot;Phone Number&quot;, should use `@string` resource">
+        <location
+            file="${:app*debug*MAIN*sourceProvider*0*resDir*0}/layout/activity_tutor_home.xml"
+            line="109"
+            column="13"
+            startOffset="4570"
+            endLine="109"
+            endColumn="40"
+            endOffset="4597"/>
+    </incident>
+
+    <incident
+        id="HardcodedText"
+        severity="warning"
+        message="Hardcoded string &quot;Please enter your offered courses:&quot;, should use `@string` resource">
+        <location
+            file="${:app*debug*MAIN*sourceProvider*0*resDir*0}/layout/activity_tutor_home.xml"
+            line="120"
+            column="9"
+            startOffset="4981"
+            endLine="120"
+            endColumn="58"
+            endOffset="5030"/>
+    </incident>
+
+    <incident
+        id="HardcodedText"
+        severity="warning"
+        message="Hardcoded string &quot;Courses offered&quot;, should use `@string` resource">
+        <location
+            file="${:app*debug*MAIN*sourceProvider*0*resDir*0}/layout/activity_tutor_home.xml"
+            line="139"
+            column="13"
+            startOffset="5847"
+            endLine="139"
+            endColumn="43"
+            endOffset="5877"/>
+    </incident>
+
+    <incident
+        id="HardcodedText"
+        severity="warning"
+        message="Hardcoded string &quot;Please enter your highest level of degree:&quot;, should use `@string` resource">
+        <location
+            file="${:app*debug*MAIN*sourceProvider*0*resDir*0}/layout/activity_tutor_home.xml"
+            line="149"
+            column="9"
+            startOffset="6223"
+            endLine="149"
+            endColumn="66"
+            endOffset="6280"/>
+    </incident>
+
+    <incident
+        id="HardcodedText"
+        severity="warning"
+        message="Hardcoded string &quot;Highest degree&quot;, should use `@string` resource">
+        <location
+            file="${:app*debug*MAIN*sourceProvider*0*resDir*0}/layout/activity_tutor_home.xml"
+            line="168"
+            column="13"
+            startOffset="7094"
+            endLine="168"
+            endColumn="42"
+            endOffset="7123"/>
+    </incident>
+
+    <incident
+        id="HardcodedText"
+        severity="warning"
+        message="Hardcoded string &quot;Sign Up&quot;, should use `@string` resource">
+        <location
+            file="${:app*debug*MAIN*sourceProvider*0*resDir*0}/layout/activity_tutor_home.xml"
+            line="177"
+            column="9"
+            startOffset="7417"
+            endLine="177"
+            endColumn="31"
+            endOffset="7439"/>
+    </incident>
+
+    <incident
+        id="HardcodedText"
+        severity="warning"
+        message="Hardcoded string &quot;Logout&quot;, should use `@string` resource">
+        <location
+            file="${:app*debug*MAIN*sourceProvider*0*resDir*0}/layout/activity_tutor_home.xml"
+            line="189"
+            column="9"
+            startOffset="7893"
+            endLine="189"
+            endColumn="30"
+            endOffset="7914"/>
+    </incident>
+
+</incidents>

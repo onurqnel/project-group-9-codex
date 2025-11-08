@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="firebase_database_url" translatable="false">https://otams-682d0-default-rtdb.firebaseio.com</string>
+    <string name="gcm_defaultSenderId" translatable="false">674158438139</string>
+    <string name="google_api_key" translatable="false">AIzaSyAbHEJhRnMt9ZyYgsrNkdOFrJ8-6rW5lR8</string>
+    <string name="google_app_id" translatable="false">1:674158438139:android:1316d6a70bbac8b4d2f25e</string>
+    <string name="google_crash_reporting_api_key" translatable="false">AIzaSyAbHEJhRnMt9ZyYgsrNkdOFrJ8-6rW5lR8</string>
+    <string name="google_storage_bucket" translatable="false">otams-682d0.firebasestorage.app</string>
+    <string name="project_id" translatable="false">otams-682d0</string>
+</resources>

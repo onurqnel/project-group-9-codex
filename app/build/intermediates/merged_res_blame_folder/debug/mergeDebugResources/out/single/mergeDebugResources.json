@@ -1,0 +1,194 @@
+[
+    {
+        "merged": "com.example.otams.app-debug-50:/layout_item_session.xml.flat",
+        "source": "com.example.otams.app-main-52:/layout/item_session.xml"
+    },
+    {
+        "merged": "com.example.otams.app-debug-50:/mipmap-xhdpi_ic_launcher_round.webp.flat",
+        "source": "com.example.otams.app-main-52:/mipmap-xhdpi/ic_launcher_round.webp"
+    },
+    {
+        "merged": "com.example.otams.app-debug-50:/mipmap-xxxhdpi_ic_launcher.webp.flat",
+        "source": "com.example.otams.app-main-52:/mipmap-xxxhdpi/ic_launcher.webp"
+    },
+    {
+        "merged": "com.example.otams.app-debug-50:/mipmap-xxhdpi_ic_launcher.webp.flat",
+        "source": "com.example.otams.app-main-52:/mipmap-xxhdpi/ic_launcher.webp"
+    },
+    {
+        "merged": "com.example.otams.app-debug-50:/layout_activity_tutor_registration.xml.flat",
+        "source": "com.example.otams.app-main-52:/layout/activity_tutor_registration.xml"
+    },
+    {
+        "merged": "com.example.otams.app-debug-50:/layout_fragment_sessions.xml.flat",
+        "source": "com.example.otams.app-main-52:/layout/fragment_sessions.xml"
+    },
+    {
+        "merged": "com.example.otams.app-debug-50:/drawable_bg.jpg.flat",
+        "source": "com.example.otams.app-main-52:/drawable/bg.jpg"
+    },
+    {
+        "merged": "com.example.otams.app-debug-50:/layout_activity_administrator_home.xml.flat",
+        "source": "com.example.otams.app-main-52:/layout/activity_administrator_home.xml"
+    },
+    {
+        "merged": "com.example.otams.app-debug-50:/layout_activity_main.xml.flat",
+        "source": "com.example.otams.app-main-52:/layout/activity_main.xml"
+    },
+    {
+        "merged": "com.example.otams.app-debug-50:/layout_activity_register.xml.flat",
+        "source": "com.example.otams.app-main-52:/layout/activity_register.xml"
+    },
+    {
+        "merged": "com.example.otams.app-debug-50:/mipmap-mdpi_ic_launcher.webp.flat",
+        "source": "com.example.otams.app-main-52:/mipmap-mdpi/ic_launcher.webp"
+    },
+    {
+        "merged": "com.example.otams.app-debug-50:/xml_backup_rules.xml.flat",
+        "source": "com.example.otams.app-main-52:/xml/backup_rules.xml"
+    },
+    {
+        "merged": "com.example.otams.app-debug-50:/layout_activity_rejected_screen.xml.flat",
+        "source": "com.example.otams.app-main-52:/layout/activity_rejected_screen.xml"
+    },
+    {
+        "merged": "com.example.otams.app-debug-50:/mipmap-xxhdpi_ic_launcher_round.webp.flat",
+        "source": "com.example.otams.app-main-52:/mipmap-xxhdpi/ic_launcher_round.webp"
+    },
+    {
+        "merged": "com.example.otams.app-debug-50:/mipmap-xxxhdpi_ic_launcher_round.webp.flat",
+        "source": "com.example.otams.app-main-52:/mipmap-xxxhdpi/ic_launcher_round.webp"
+    },
+    {
+        "merged": "com.example.otams.app-debug-50:/layout_activity_landing.xml.flat",
+        "source": "com.example.otams.app-main-52:/layout/activity_landing.xml"
+    },
+    {
+        "merged": "com.example.otams.app-debug-50:/font_poppins_regular.ttf.flat",
+        "source": "com.example.otams.app-main-52:/font/poppins_regular.ttf"
+    },
+    {
+        "merged": "com.example.otams.app-debug-50:/drawable_bg2.png.flat",
+        "source": "com.example.otams.app-main-52:/drawable/bg2.png"
+    },
+    {
+        "merged": "com.example.otams.app-debug-50:/layout_bottomsheet_student_info.xml.flat",
+        "source": "com.example.otams.app-main-52:/layout/bottomsheet_student_info.xml"
+    },
+    {
+        "merged": "com.example.otams.app-debug-50:/layout_activity_student_registration.xml.flat",
+        "source": "com.example.otams.app-main-52:/layout/activity_student_registration.xml"
+    },
+    {
+        "merged": "com.example.otams.app-debug-50:/font_roboto_semibold.ttf.flat",
+        "source": "com.example.otams.app-main-52:/font/roboto_semibold.ttf"
+    },
+    {
+        "merged": "com.example.otams.app-debug-50:/layout_activity_pending_screen.xml.flat",
+        "source": "com.example.otams.app-main-52:/layout/activity_pending_screen.xml"
+    },
+    {
+        "merged": "com.example.otams.app-debug-50:/font_roboto_bold.ttf.flat",
+        "source": "com.example.otams.app-main-52:/font/roboto_bold.ttf"
+    },
+    {
+        "merged": "com.example.otams.app-debug-50:/layout_item_availability_slot.xml.flat",
+        "source": "com.example.otams.app-main-52:/layout/item_availability_slot.xml"
+    },
+    {
+        "merged": "com.example.otams.app-debug-50:/drawable_done_icon.xml.flat",
+        "source": "com.example.otams.app-main-52:/drawable/done_icon.xml"
+    },
+    {
+        "merged": "com.example.otams.app-debug-50:/layout_item_registration_request.xml.flat",
+        "source": "com.example.otams.app-main-52:/layout/item_registration_request.xml"
+    },
+    {
+        "merged": "com.example.otams.app-debug-50:/layout_activity_tutor_home.xml.flat",
+        "source": "com.example.otams.app-main-52:/layout/activity_tutor_home.xml"
+    },
+    {
+        "merged": "com.example.otams.app-debug-50:/drawable_ic_launcher_background.xml.flat",
+        "source": "com.example.otams.app-main-52:/drawable/ic_launcher_background.xml"
+    },
+    {
+        "merged": "com.example.otams.app-debug-50:/mipmap-anydpi-v26_ic_launcher.xml.flat",
+        "source": "com.example.otams.app-main-52:/mipmap-anydpi-v26/ic_launcher.xml"
+    },
+    {
+        "merged": "com.example.otams.app-debug-50:/mipmap-hdpi_ic_launcher_round.webp.flat",
+        "source": "com.example.otams.app-main-52:/mipmap-hdpi/ic_launcher_round.webp"
+    },
+    {
+        "merged": "com.example.otams.app-debug-50:/font_roboto_regular.ttf.flat",
+        "source": "com.example.otams.app-main-52:/font/roboto_regular.ttf"
+    },
+    {
+        "merged": "com.example.otams.app-debug-50:/layout_activity_approved_screen.xml.flat",
+        "source": "com.example.otams.app-main-52:/layout/activity_approved_screen.xml"
+    },
+    {
+        "merged": "com.example.otams.app-debug-50:/font_poppins_semibold.ttf.flat",
+        "source": "com.example.otams.app-main-52:/font/poppins_semibold.ttf"
+    },
+    {
+        "merged": "com.example.otams.app-debug-50:/drawable_ic_launcher_foreground.xml.flat",
+        "source": "com.example.otams.app-main-52:/drawable/ic_launcher_foreground.xml"
+    },
+    {
+        "merged": "com.example.otams.app-debug-50:/layout_activity_login.xml.flat",
+        "source": "com.example.otams.app-main-52:/layout/activity_login.xml"
+    },
+    {
+        "merged": "com.example.otams.app-debug-50:/font_poppins_bold.ttf.flat",
+        "source": "com.example.otams.app-main-52:/font/poppins_bold.ttf"
+    },
+    {
+        "merged": "com.example.otams.app-debug-50:/layout_fragment_availability.xml.flat",
+        "source": "com.example.otams.app-main-52:/layout/fragment_availability.xml"
+    },
+    {
+        "merged": "com.example.otams.app-debug-50:/drawable_password_icon.xml.flat",
+        "source": "com.example.otams.app-main-52:/drawable/password_icon.xml"
+    },
+    {
+        "merged": "com.example.otams.app-debug-50:/layout_fragment_requests.xml.flat",
+        "source": "com.example.otams.app-main-52:/layout/fragment_requests.xml"
+    },
+    {
+        "merged": "com.example.otams.app-debug-50:/drawable_logo.png.flat",
+        "source": "com.example.otams.app-main-52:/drawable/logo.png"
+    },
+    {
+        "merged": "com.example.otams.app-debug-50:/layout_activity_student_home.xml.flat",
+        "source": "com.example.otams.app-main-52:/layout/activity_student_home.xml"
+    },
+    {
+        "merged": "com.example.otams.app-debug-50:/mipmap-xhdpi_ic_launcher.webp.flat",
+        "source": "com.example.otams.app-main-52:/mipmap-xhdpi/ic_launcher.webp"
+    },
+    {
+        "merged": "com.example.otams.app-debug-50:/mipmap-mdpi_ic_launcher_round.webp.flat",
+        "source": "com.example.otams.app-main-52:/mipmap-mdpi/ic_launcher_round.webp"
+    },
+    {
+        "merged": "com.example.otams.app-debug-50:/xml_data_extraction_rules.xml.flat",
+        "source": "com.example.otams.app-main-52:/xml/data_extraction_rules.xml"
+    },
+    {
+        "merged": "com.example.otams.app-debug-50:/layout_item_pending_session.xml.flat",
+        "source": "com.example.otams.app-main-52:/layout/item_pending_session.xml"
+    },
+    {
+        "merged": "com.example.otams.app-debug-50:/mipmap-anydpi-v26_ic_launcher_round.xml.flat",
+        "source": "com.example.otams.app-main-52:/mipmap-anydpi-v26/ic_launcher_round.xml"
+    },
+    {
+        "merged": "com.example.otams.app-debug-50:/layout_activity_inbox_rejection_request_page.xml.flat",
+        "source": "com.example.otams.app-main-52:/layout/activity_inbox_rejection_request_page.xml"
+    },
+    {
+        "merged": "com.example.otams.app-debug-50:/mipmap-hdpi_ic_launcher.webp.flat",
+        "source": "com.example.otams.app-main-52:/mipmap-hdpi/ic_launcher.webp"
+    }
+]

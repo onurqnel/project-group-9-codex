@@ -1,0 +1,19 @@
+# Android & Gradle
+/local.properties
+/gradle.properties
+/.idea
+/.gradle
+/build/
+/captures/
+
+# Firebase & functions secrets
+functions/.env
+functions/.runtimeconfig.json
+app/google-services.json
+
+# Node dependencies
+functions/node_modules/
+
+# OS files
+.DS_Store
+Thumbs.db

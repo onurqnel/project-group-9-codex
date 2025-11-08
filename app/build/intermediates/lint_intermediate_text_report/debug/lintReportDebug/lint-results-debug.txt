@@ -1,0 +1,276 @@
+/home/onur/uottawa/fall/seg2105/project-group-9/gradle/wrapper/gradle-wrapper.properties:4: Warning: A newer version of Gradle than 8.13 is available: 8.14.3 [AndroidGradlePluginVersion]
+distributionUrl=https\://services.gradle.org/distributions/gradle-8.13-bin.zip
+                ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+   Explanation for issues of type "AndroidGradlePluginVersion":
+   This detector looks for usage of the Android Gradle Plugin where the
+   version you are using is not the current stable release. Using older
+   versions is fine, and there are cases where you deliberately want to stick
+   with an older version. However, you may simply not be aware that a more
+   recent version is available, and that is what this lint check helps find.
+
+/home/onur/uottawa/fall/seg2105/project-group-9/app/build.gradle.kts:38: Warning: A newer version of com.google.firebase:firebase-bom than 34.3.0 is available: 34.4.0 [GradleDependency]
+    implementation(platform("com.google.firebase:firebase-bom:34.3.0"))
+                   ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+   Explanation for issues of type "GradleDependency":
+   This detector looks for usages of libraries where the version you are using
+   is not the current stable release. Using older versions is fine, and there
+   are cases where you deliberately want to stick with an older version.
+   However, you may simply not be aware that a more recent version is
+   available, and that is what this lint check helps find.
+
+/home/onur/uottawa/fall/seg2105/project-group-9/app/src/main/res/layout/activity_landing.xml:10: Warning: Possible overdraw: Root element paints background @drawable/bg2 with a theme that also paints a background (inferred theme is @style/Theme.Otams) [Overdraw]
+    android:background="@drawable/bg2"
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/home/onur/uottawa/fall/seg2105/project-group-9/app/src/main/res/layout/activity_login.xml:9: Warning: Possible overdraw: Root element paints background @drawable/bg with a theme that also paints a background (inferred theme is @style/Theme_Otams) [Overdraw]
+    android:background="@drawable/bg"
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/home/onur/uottawa/fall/seg2105/project-group-9/app/src/main/res/layout/activity_main.xml:10: Warning: Possible overdraw: Root element paints background @color/white with a theme that also paints a background (inferred theme is @style/Theme.Otams) [Overdraw]
+    android:background="@color/white"
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/home/onur/uottawa/fall/seg2105/project-group-9/app/src/main/res/layout/activity_register.xml:6: Warning: Possible overdraw: Root element paints background @drawable/bg with a theme that also paints a background (inferred theme is @style/Theme_Otams) [Overdraw]
+    android:background="@drawable/bg"
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+   Explanation for issues of type "Overdraw":
+   If you set a background drawable on a root view, then you should use a
+   custom theme where the theme background is null. Otherwise, the theme
+   background will be painted first, only to have your custom background
+   completely cover it; this is called "overdraw".
+
+   NOTE: This detector relies on figuring out which layouts are associated
+   with which activities based on scanning the Java code, and it's currently
+   doing that using an inexact pattern matching algorithm. Therefore, it can
+   incorrectly conclude which activity the layout is associated with and then
+   wrongly complain that a background-theme is hidden.
+
+   If you want your custom background on multiple pages, then you should
+   consider making a custom theme with your custom background and just using
+   that theme instead of a root element background.
+
+   Of course it's possible that your custom drawable is translucent and you
+   want it to be mixed with the background. However, you will get better
+   performance if you pre-mix the background with your drawable and use that
+   resulting image or color as a custom theme background instead.
+
+/home/onur/uottawa/fall/seg2105/project-group-9/app/src/main/res/values/colors.xml:16: Warning: The resource R.color.black appears to be unused [UnusedResources]
+    <color name="black">#FF000000</color>
+           ~~~~~~~~~~~~
+/home/onur/uottawa/fall/seg2105/project-group-9/app/src/main/res/drawable/done_icon.xml:1: Warning: The resource R.drawable.done_icon appears to be unused [UnusedResources]
+<vector xmlns:android="http://schemas.android.com/apk/res/android" android:height="24dp" android:tint="#242528" android:viewportHeight="24" android:viewportWidth="24" android:width="24dp">
+^
+/home/onur/uottawa/fall/seg2105/project-group-9/app/src/main/res/drawable/logo.png: Warning: The resource R.drawable.logo appears to be unused [UnusedResources]
+/home/onur/uottawa/fall/seg2105/project-group-9/app/src/main/res/drawable/password_icon.xml:1: Warning: The resource R.drawable.password_icon appears to be unused [UnusedResources]
+<vector xmlns:android="http://schemas.android.com/apk/res/android" android:height="24dp" android:tint="#242528" android:viewportHeight="24" android:viewportWidth="24" android:width="24dp">
+^
+/home/onur/uottawa/fall/seg2105/project-group-9/app/src/main/res/values/strings.xml:3: Warning: The resource R.string.logo_of_the_app appears to be unused [UnusedResources]
+    <string name="logo_of_the_app">Logo_of_the_app</string>
+            ~~~~~~~~~~~~~~~~~~~~~~
+/home/onur/uottawa/fall/seg2105/project-group-9/app/src/main/res/values/strings.xml:4: Warning: The resource R.string.otams appears to be unused [UnusedResources]
+    <string name="otams">OTAMS</string>
+            ~~~~~~~~~~~~
+/home/onur/uottawa/fall/seg2105/project-group-9/app/src/main/res/values/strings.xml:5: Warning: The resource R.string.welcome appears to be unused [UnusedResources]
+    <string name="welcome">Welcome</string>
+            ~~~~~~~~~~~~~~
+/home/onur/uottawa/fall/seg2105/project-group-9/app/src/main/res/values/strings.xml:10: Warning: The resource R.string.click_to_login appears to be unused [UnusedResources]
+    <string name="click_to_login">Click to login</string>
+            ~~~~~~~~~~~~~~~~~~~~~
+/home/onur/uottawa/fall/seg2105/project-group-9/app/src/main/res/values/styles.xml:4: Warning: The resource R.style.Theme_YourAppName appears to be unused [UnusedResources]
+    <style name="Theme.YourAppName" parent="Theme.MaterialComponents.DayNight.NoActionBar">
+           ~~~~~~~~~~~~~~~~~~~~~~~~
+/home/onur/uottawa/fall/seg2105/project-group-9/app/src/main/res/values/themes.xml:49: Warning: The resource R.style.Widget_Otams_Button_Outlined appears to be unused [UnusedResources]
+    <style name="Widget.Otams.Button.Outlined" parent="Widget.Material3.Button.OutlinedButton">
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+   Explanation for issues of type "UnusedResources":
+   Unused resources make applications larger and slow down builds.
+
+
+   The unused resource check can ignore tests. If you want to include
+   resources that are only referenced from tests, consider packaging them in a
+   test source set instead.
+
+   You can include test sources in the unused resource check by setting the
+   system property lint.unused-resources.include-tests =true, and to exclude
+   them (usually for performance reasons), use
+   lint.unused-resources.exclude-tests =true.
+   ,
+
+   Available options:
+
+   **skip-libraries** (default is true):
+   Whether the unused resource check should skip reporting unused resources in libraries.
+
+   Many libraries will declare resources that are part of the library surface; other modules depending on the library will also reference the resources. To avoid reporting all these resources as unused (in the context of a library), the unused resource check normally skips reporting unused resources in libraries. Instead, run the unused resource check on the consuming app module (along with `checkDependencies=true`).
+
+   However, there are cases where you want to check that all the resources declared in a library are used; in that case, you can disable the skip option.
+
+   To configure this option, use a `lint.xml` file with an <option> like this:
+
+   ```xml
+   <lint>
+       <issue id="UnusedResources">
+           <option name="skip-libraries" value="true" />
+       </issue>
+   </lint>
+   ```
+
+/home/onur/uottawa/fall/seg2105/project-group-9/app/src/main/res/drawable/bg.jpg: Warning: Found bitmap drawable res/drawable/bg.jpg in densityless folder [IconLocation]
+/home/onur/uottawa/fall/seg2105/project-group-9/app/src/main/res/drawable/bg2.png: Warning: Found bitmap drawable res/drawable/bg2.png in densityless folder [IconLocation]
+/home/onur/uottawa/fall/seg2105/project-group-9/app/src/main/res/drawable/logo.png: Warning: Found bitmap drawable res/drawable/logo.png in densityless folder [IconLocation]
+
+   Explanation for issues of type "IconLocation":
+   The res/drawable folder is intended for density-independent graphics such
+   as shapes defined in XML. For bitmaps, move it to drawable-mdpi and
+   consider providing higher and lower resolution versions in drawable-ldpi,
+   drawable-hdpi and drawable-xhdpi. If the icon really is density independent
+   (for example a solid color) you can place it in drawable-nodpi.
+
+   https://developer.android.com/guide/practices/screens_support.html
+
+/home/onur/uottawa/fall/seg2105/project-group-9/app/build.gradle.kts:38: Warning: Use version catalog instead [UseTomlInstead]
+    implementation(platform("com.google.firebase:firebase-bom:34.3.0"))
+                   ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/home/onur/uottawa/fall/seg2105/project-group-9/app/build.gradle.kts:39: Warning: Use version catalog instead (com.google.firebase:firebase-auth is already available as firebase-auth, but using version 24.0.1 instead) [UseTomlInstead]
+    implementation("com.google.firebase:firebase-auth")
+                   ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/home/onur/uottawa/fall/seg2105/project-group-9/app/build.gradle.kts:40: Warning: Use version catalog instead [UseTomlInstead]
+    implementation("com.google.firebase:firebase-firestore")
+                   ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+   Explanation for issues of type "UseTomlInstead":
+   If your project is using a libs.versions.toml file, you should place all
+   Gradle dependencies in the TOML file. This lint check looks for version
+   declarations outside of the TOML file and suggests moving them (and in the
+   IDE, provides a quickfix to performing the operation automatically).
+
+/home/onur/uottawa/fall/seg2105/project-group-9/app/src/main/java/com/example/otams/AdministratorHome.java:28: Warning: String literal in setText can not be translated. Use Android resources instead. [SetTextI18n]
+            welcomeText.setText("Welcome, Administrator!");
+                                ~~~~~~~~~~~~~~~~~~~~~~~~~
+/home/onur/uottawa/fall/seg2105/project-group-9/app/src/main/java/com/example/otams/StudentHome.java:35: Warning: String literal in setText can not be translated. Use Android resources instead. [SetTextI18n]
+            welcomeText.setText("Welcome, Student!");
+                                ~~~~~~~~~~~~~~~~~~~
+/home/onur/uottawa/fall/seg2105/project-group-9/app/src/main/java/com/example/otams/TutorHome.java:28: Warning: String literal in setText can not be translated. Use Android resources instead. [SetTextI18n]
+            welcomeText.setText("Welcome, Tutor!");
+                                ~~~~~~~~~~~~~~~~~
+
+   Explanation for issues of type "SetTextI18n":
+   When calling TextView#setText
+   * Never call Number#toString() to format numbers; it will not handle
+   fraction separators and locale-specific digits properly. Consider using
+   String#format with proper format specifications (%d or %f) instead.
+   * Do not pass a string literal (e.g. "Hello") to display text. Hardcoded
+   text can not be properly translated to other languages. Consider using
+   Android resource strings instead.
+   * Do not build messages by concatenating text chunks. Such messages can not
+   be properly translated.
+
+   https://developer.android.com/guide/topics/resources/localization.html
+
+/home/onur/uottawa/fall/seg2105/project-group-9/app/src/main/res/layout/activity_administrator_home.xml:13: Warning: Hardcoded string "Welcome Administrator", should use @string resource [HardcodedText]
+        android:text="Welcome Administrator"
+        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/home/onur/uottawa/fall/seg2105/project-group-9/app/src/main/res/layout/activity_administrator_home.xml:23: Warning: Hardcoded string "Logout", should use @string resource [HardcodedText]
+        android:text="Logout"
+        ~~~~~~~~~~~~~~~~~~~~~
+/home/onur/uottawa/fall/seg2105/project-group-9/app/src/main/res/layout/activity_landing.xml:26: Warning: Hardcoded string "Get Started", should use @string resource [HardcodedText]
+            android:text="Get Started"
+            ~~~~~~~~~~~~~~~~~~~~~~~~~~
+/home/onur/uottawa/fall/seg2105/project-group-9/app/src/main/res/layout/activity_landing.xml:43: Warning: Hardcoded string "Tutor Academy", should use @string resource [HardcodedText]
+            android:text="Tutor Academy"
+            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/home/onur/uottawa/fall/seg2105/project-group-9/app/src/main/res/layout/activity_landing.xml:62: Warning: Hardcoded string "Welcome to", should use @string resource [HardcodedText]
+            android:text="Welcome to"
+            ~~~~~~~~~~~~~~~~~~~~~~~~~
+/home/onur/uottawa/fall/seg2105/project-group-9/app/src/main/res/layout/activity_main.xml:17: Warning: Hardcoded string "User Details", should use @string resource [HardcodedText]
+        android:text="User Details"
+        ~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/home/onur/uottawa/fall/seg2105/project-group-9/app/src/main/res/layout/activity_student_home.xml:16: Warning: Hardcoded string "Welcome Student", should use @string resource [HardcodedText]
+        android:text="Welcome Student"
+        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/home/onur/uottawa/fall/seg2105/project-group-9/app/src/main/res/layout/activity_student_home.xml:31: Warning: Hardcoded string "Please enter your first name:", should use @string resource [HardcodedText]
+        android:text="Please enter your first name:"
+        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/home/onur/uottawa/fall/seg2105/project-group-9/app/src/main/res/layout/activity_student_home.xml:50: Warning: Hardcoded string "First Name", should use @string resource [HardcodedText]
+            android:hint="First Name" />
+            ~~~~~~~~~~~~~~~~~~~~~~~~~
+/home/onur/uottawa/fall/seg2105/project-group-9/app/src/main/res/layout/activity_student_home.xml:60: Warning: Hardcoded string "Please enter your last name:", should use @string resource [HardcodedText]
+        android:text="Please enter your last name:"
+        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/home/onur/uottawa/fall/seg2105/project-group-9/app/src/main/res/layout/activity_student_home.xml:79: Warning: Hardcoded string "Last Name", should use @string resource [HardcodedText]
+            android:hint="Last Name" />
+            ~~~~~~~~~~~~~~~~~~~~~~~~
+/home/onur/uottawa/fall/seg2105/project-group-9/app/src/main/res/layout/activity_student_home.xml:89: Warning: Hardcoded string "Please enter your phone number:", should use @string resource [HardcodedText]
+        android:text="Please enter your phone number:"
+        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/home/onur/uottawa/fall/seg2105/project-group-9/app/src/main/res/layout/activity_student_home.xml:108: Warning: Hardcoded string "Phone Number", should use @string resource [HardcodedText]
+            android:hint="Phone Number"
+            ~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/home/onur/uottawa/fall/seg2105/project-group-9/app/src/main/res/layout/activity_student_home.xml:119: Warning: Hardcoded string "Please enter your field of study:", should use @string resource [HardcodedText]
+        android:text="Please enter your field of study:"
+        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/home/onur/uottawa/fall/seg2105/project-group-9/app/src/main/res/layout/activity_student_home.xml:138: Warning: Hardcoded string "Program of study", should use @string resource [HardcodedText]
+            android:hint="Program of study" />
+            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/home/onur/uottawa/fall/seg2105/project-group-9/app/src/main/res/layout/activity_student_home.xml:147: Warning: Hardcoded string "Sign Up", should use @string resource [HardcodedText]
+        android:text="Sign Up"
+        ~~~~~~~~~~~~~~~~~~~~~~
+/home/onur/uottawa/fall/seg2105/project-group-9/app/src/main/res/layout/activity_student_home.xml:159: Warning: Hardcoded string "Logout", should use @string resource [HardcodedText]
+        android:text="Logout"
+        ~~~~~~~~~~~~~~~~~~~~~
+/home/onur/uottawa/fall/seg2105/project-group-9/app/src/main/res/layout/activity_tutor_home.xml:17: Warning: Hardcoded string "Welcome Tutor", should use @string resource [HardcodedText]
+        android:text="Welcome Tutor"
+        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/home/onur/uottawa/fall/seg2105/project-group-9/app/src/main/res/layout/activity_tutor_home.xml:32: Warning: Hardcoded string "Please enter your first name:", should use @string resource [HardcodedText]
+        android:text="Please enter your first name:"
+        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/home/onur/uottawa/fall/seg2105/project-group-9/app/src/main/res/layout/activity_tutor_home.xml:51: Warning: Hardcoded string "First Name", should use @string resource [HardcodedText]
+            android:hint="First Name" />
+            ~~~~~~~~~~~~~~~~~~~~~~~~~
+/home/onur/uottawa/fall/seg2105/project-group-9/app/src/main/res/layout/activity_tutor_home.xml:61: Warning: Hardcoded string "Please enter your last name:", should use @string resource [HardcodedText]
+        android:text="Please enter your last name:"
+        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/home/onur/uottawa/fall/seg2105/project-group-9/app/src/main/res/layout/activity_tutor_home.xml:80: Warning: Hardcoded string "Last Name", should use @string resource [HardcodedText]
+            android:hint="Last Name" />
+            ~~~~~~~~~~~~~~~~~~~~~~~~
+/home/onur/uottawa/fall/seg2105/project-group-9/app/src/main/res/layout/activity_tutor_home.xml:90: Warning: Hardcoded string "Please enter your phone number:", should use @string resource [HardcodedText]
+        android:text="Please enter your phone number:"
+        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/home/onur/uottawa/fall/seg2105/project-group-9/app/src/main/res/layout/activity_tutor_home.xml:109: Warning: Hardcoded string "Phone Number", should use @string resource [HardcodedText]
+            android:hint="Phone Number"
+            ~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/home/onur/uottawa/fall/seg2105/project-group-9/app/src/main/res/layout/activity_tutor_home.xml:120: Warning: Hardcoded string "Please enter your offered courses:", should use @string resource [HardcodedText]
+        android:text="Please enter your offered courses:"
+        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/home/onur/uottawa/fall/seg2105/project-group-9/app/src/main/res/layout/activity_tutor_home.xml:139: Warning: Hardcoded string "Courses offered", should use @string resource [HardcodedText]
+            android:hint="Courses offered" />
+            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/home/onur/uottawa/fall/seg2105/project-group-9/app/src/main/res/layout/activity_tutor_home.xml:149: Warning: Hardcoded string "Please enter your highest level of degree:", should use @string resource [HardcodedText]
+        android:text="Please enter your highest level of degree:"
+        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/home/onur/uottawa/fall/seg2105/project-group-9/app/src/main/res/layout/activity_tutor_home.xml:168: Warning: Hardcoded string "Highest degree", should use @string resource [HardcodedText]
+            android:hint="Highest degree" />
+            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/home/onur/uottawa/fall/seg2105/project-group-9/app/src/main/res/layout/activity_tutor_home.xml:177: Warning: Hardcoded string "Sign Up", should use @string resource [HardcodedText]
+        android:text="Sign Up"
+        ~~~~~~~~~~~~~~~~~~~~~~
+/home/onur/uottawa/fall/seg2105/project-group-9/app/src/main/res/layout/activity_tutor_home.xml:189: Warning: Hardcoded string "Logout", should use @string resource [HardcodedText]
+        android:text="Logout"
+        ~~~~~~~~~~~~~~~~~~~~~
+
+   Explanation for issues of type "HardcodedText":
+   Hardcoding text attributes directly in layout files is bad for several
+   reasons:
+
+   * When creating configuration variations (for example for landscape or
+   portrait) you have to repeat the actual text (and keep it up to date when
+   making changes)
+
+   * The application cannot be translated to other languages by just adding
+   new translations for existing string resources.
+
+   There are quickfixes to automatically extract this hardcoded string into a
+   resource lookup.
+
+0 errors, 55 warnings
