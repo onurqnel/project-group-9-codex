@@ -1,6 +1,6 @@
 # Android & Gradle
 /local.properties
-/gradle.properties
+# Gradle properties (tracked to share required configuration)
 /.idea
 /.gradle
 /build/
