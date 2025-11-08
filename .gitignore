@@ -1,19 +1,26 @@
-# Android & Gradle
 /local.properties
-# Gradle properties (tracked to share required configuration)
-/.idea
-/.gradle
+/.idea/
+/.gradle/
 /build/
 /captures/
-
-# Firebase & functions secrets
+/app/build/
+/app/release/
+/app/debug/
 functions/.env
 functions/.runtimeconfig.json
 app/google-services.json
-
-# Node dependencies
+firebase-debug.log
+firebase.json
+.firebaserc
 functions/node_modules/
-
-# OS files
+functions/package-lock.json
 .DS_Store
 Thumbs.db
+ehthumbs.db
+Desktop.ini
+*.iml
+*.log
+*.tmp
+*.bak
+*.swp
+*.lock
