@@ -66,4 +66,44 @@
     <string name="requests_approved">Request approved</string>
     <string name="requests_rejected">Request rejected</string>
     <string name="requests_action_error">Failed to update request status</string>
+
+    <!-- Tutor availability -->
+    <string name="availability_time_range">%1$s – %2$s</string>
+    <string name="availability_status_expired">Expired</string>
+    <string name="availability_status_open">Open</string>
+    <string name="availability_manual_approval">Manual approval required</string>
+    <string name="availability_auto_approval">Auto-approve enabled</string>
+    <string name="availability_no_tutor">No tutor logged in.</string>
+    <string name="availability_load_error">Unable to load availability.</string>
+    <string name="availability_time_error">Select a valid start and end time.</string>
+    <string name="availability_increment_error">Start and end times must be in 30-minute increments.</string>
+    <string name="availability_end_after_start">End time must be after the start time.</string>
+    <string name="availability_past_error">Availability must be in the future.</string>
+    <string name="availability_overlap_error">This slot overlaps with an existing availability.</string>
+    <string name="availability_slot_created">Availability slot added.</string>
+    <string name="availability_slot_error">Unable to update availability slot.</string>
+    <string name="availability_slot_deleted">Availability slot removed.</string>
+
+    <!-- Tutor sessions -->
+    <string name="session_unknown_student">Unknown student</string>
+    <string name="session_unknown_course">Course not specified</string>
+    <string name="session_time_range">%1$s - %2$s</string>
+    <string name="session_action_approve">Approve</string>
+    <string name="session_action_reject">Reject</string>
+    <string name="session_action_cancel">Cancel session</string>
+
+    <string name="sessions_no_tutor">No tutor logged in.</string>
+    <string name="sessions_load_error">Unable to load sessions.</string>
+    <string name="sessions_detail_email">Email: %1$s</string>
+    <string name="sessions_detail_phone">Phone: %1$s</string>
+    <string name="sessions_detail_program">Program: %1$s</string>
+    <string name="sessions_detail_course">Course: %1$s</string>
+    <string name="sessions_detail_no_info">No additional student information is available for this session.</string>
+    <string name="sessions_detail_title">Session details</string>
+    <string name="sessions_approved_toast">Session approved.</string>
+    <string name="sessions_rejected_toast">Session rejected.</string>
+    <string name="sessions_cancelled_toast">Session cancelled.</string>
+    <string name="sessions_update_error">Unable to update session.</string>
+    <string name="sessions_upcoming_empty">No upcoming sessions yet</string>
+    <string name="sessions_past_empty">No past sessions</string>
 </resources>
